@@ -1,0 +1,429 @@
+/* = КО ВСЕМУ ДОКУМЕНТУ ==================================== */
+/* - Позиционирование -------------------------------------- */
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    /*общий контейнер для того, чтобы задать структуру страницы и для того, чтобы футер был прибит к низу страницы, даже если содержания совсем мало*/
+    display: grid;
+    min-height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(80px, auto) 1fr minmax(120px, auto);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/* - Типографика ------------------------------------------- */
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #434242;
+}
+
+/*H2*/
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.title_underline {
+    text-decoration: underline;
+}
+
+/*H3*/
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/*просто текст во всех параграфах*/
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #282322;
+}
+
+.color_white {
+    color: #FFFFFF;
+}
+
+/* - Оформление: ссылки, кнопки ---------------------------- */
+.button {
+    display: inline-flex;
+    align-items: center;
+    background: #282322;
+}
+
+.button a {
+    padding: 13px 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* .button:hover {} */
+
+/* = HEADER ================================================ */
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". header__content .";
+    background-color: #3a2d34;
+}
+
+.header__content {
+    grid-area: header__content;
+}
+
+/* = MAIN ================================================ */
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "intro"
+        "about"
+        "services"
+        "gallery"
+        "projects"
+        "certificates"
+        "feedback"
+        "faq"
+        "contacts";
+}
+
+
+.intro,
+.about,
+.services,
+.gallery,
+.projects,
+.certificates,
+.feedback,
+.faq,
+.contacts {
+    margin-bottom: 180px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .intro,
+    .about,
+    .services,
+    .gallery,
+    .projects,
+    .certificates,
+    .feedback,
+    .faq,
+    .contacts {
+        margin-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .intro,
+    .about,
+    .services,
+    .gallery,
+    .projects,
+    .certificates,
+    .feedback,
+    .faq,
+    .contacts {
+        margin-bottom: 60px;
+    }
+}
+
+/* = INTRO ================================================ */
+.intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". intro__content .";
+    background-color: #EAD1D0;
+}
+
+.intro__content {
+    grid-area: intro__content;
+}
+
+@media screen and (max-width: 1024px) {
+    .intro {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = ABOUT ================================================ */
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". about__content .";
+}
+
+.about__content {
+    grid-area: about__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = SERVICES ================================================ */
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". services__content .";
+}
+
+.services__content {
+    grid-area: services__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .services {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = GALLERY ================================================ */
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". gallery__content .";
+}
+
+.gallery__content {
+    grid-area: gallery__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = PROJECTS ================================================ */
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". projects__content .";
+}
+
+.projects__content {
+    grid-area: projects__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .projects {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = CERTIFICATES ================================================ */
+.certificates {
+    grid-area: certificates;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". certificates__content .";
+}
+
+.certificates__content {
+    grid-area: certificates__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .certificates {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .certificates {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = FEEDBACK ================================================ */
+.feedback {
+    grid-area: feedback;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". feedback__content .";
+}
+
+.feedback__content {
+    grid-area: feedback__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .feedback {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = FAQ ================================================ */
+.faq {
+    grid-area: faq;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". faq__content .";
+}
+
+.faq__content {
+    grid-area: faq__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .faq {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .faq {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = CONTACTS ================================================ */
+.contacts {
+    grid-area: contacts;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". contacts__content .";
+}
+
+.contacts__content {
+    grid-area: contacts__content;
+    background-color: #EAD1D0;
+}
+
+@media screen and (max-width: 1024px) {
+    .contacts {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+/* = FOOTER ================================================ */
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". footer__content .";
+    background-color: #3a2d34;
+}
+
+.footer__content {
+    grid-area: footer__content;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
