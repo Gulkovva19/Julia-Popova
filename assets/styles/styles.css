@@ -232,6 +232,47 @@ body {
 .services__content {
     grid-area: services__content;
     background-color: #EAD1D0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.services__block {
+    display: flex;
+    justify-content: center;
+}
+
+.services__column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    max-width: 430px;
+}
+
+.services__title {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    margin-right: 20px;
+}
+
+.services__item {
+    display: flex;
+    /* border: 1px solid red; */
+    height: 150px;
+    /* margin-left: 30px; */
+    align-self: center;
+    min-width: 430px;
+}
+
+.services__item__text {
+    align-self: center;
 }
 
 @media screen and (max-width: 1024px) {
