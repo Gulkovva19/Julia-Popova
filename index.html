@@ -13,6 +13,52 @@
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <title>Юлия Попова</title>
+
+    <style>
+        .main .projects__wrapper {
+            background: antiquewhite; /*удалить после создания блока*/
+            max-width: 1200px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .main .projects__wrapper .projects__content_left {
+            background: rgb(139, 148, 90); /*удалить после создания блока*/
+            max-height: 490px;
+            flex-basis: 46%;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main .projects__wrapper .projects__content_right {
+            background: rgb(129, 108, 80); /*удалить после создания блока*/
+            max-height: 490px;
+            box-sizing: border-box;
+            /* max-width: 430px; */
+            flex-basis: 54%;
+            
+
+        }
+
+        .main .projects__wrapper .projects__item {
+            /* margin-bottom: 30px; */
+        }
+
+        .main .projects__wrapper .project__link {
+            text-decoration: none;
+            color: #282322;            
+        }
+
+        .main .projects__wrapper .project__link:hover {
+            text-decoration: none;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;            
+        }
+    </style>
 </head>
 
 <body>
@@ -55,7 +101,18 @@
             </div>
             <div class="projects">
                 <div class="projects__content">
-                    Блок "Мои проекты, мои успехи" (Валерия)
+                    <!--Блок "Мои проекты, мои успехи" (Валерия) -->
+                    <h2 class="intro__title title">Реализованные проекты</h2>
+                    <div class="projects__wrapper">
+                        <ul class="projects__content_left">
+                            <li class="projects__item"><a class="project__link" href="https://забота-клуб.рф" target="_blank">Инклюзивный клуб "Забота"</a></li>
+                            <li class="projects__item"><a class="project__link" href="http://nko.plescy2020.tilda.ws" target="_blank">Плесецкий общественный ресурсный центр</a></li>
+                            <li class="projects__item"><a class="project__link" href="https://vk.com/norc_29" target="_blank">НОРЦ (Няндомский общественный ресурсный центр)</a></li>
+                        </ul>
+                        <div class="projects__content_right">
+                            <img src="" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="certificates">
