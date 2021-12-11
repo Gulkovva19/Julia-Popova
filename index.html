@@ -15,86 +15,8 @@
     <title>Юлия Попова</title>
 
     <style>
-        .projects__content {
-            background: antiquewhite; /*удалить после создания блока*/
-            display: flex;
-            flex-direction: row;
-            position: relative;
-        }
 
-        .projects__content .projects__content_left {
-            background: rgb(139, 148, 90); /*удалить после создания блока*/
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            min-height: 350px;
-        }
-
-        .projects__content .projects__content_left .projects__list {
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding-left: 10px;
-        }
-
-        .projects__content .projects__content_left .projects__list .project__item {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            justify-content: center;  
-        }
-
-        .projects__content .projects__content_left .projects__list .project__item .project__link {
-            display: block;
-            text-decoration: none;
-            color: #282322;
-            transition: all .3s ease; /*прочти, что за свойство*/    
-        }
-
-        .projects__content .projects__content_left .projects__list .project__item:hover .project__link {
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 600;     
-        }
-
-        .projects__content .projects__content_left .projects__list .project__item + .project__image,
-        .projects__content .projects__content_left .projects__list .project__image:first-child {
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            display: block;
-            position: absolute;
-            right: 10px;
-            width: calc(50% - 20px);
-            top: 50%;
-            transform: translateY(-50%);
-            height: 90%;
-            opacity: 0;
-            transition: all .3s ease;
-        }
-
-        .projects__content .projects__content_left .projects__list .project__item+ .project__image {
-            z-index: 2;
-        }
-
-        .projects__content .projects__content_left .projects__list .project__image:first-child {
-            z-index: 1;
-            opacity: 1;
-        }
-
-        .projects__content .projects__content_left .projects__list:hover .project__image:first-child {
-            opacity: 0;
-        }
-
-        .projects__content .projects__content_left .projects__list .project__item:hover + .project__image {
-            opacity: 1;
-        }
-
-        .projects__content .projects__content_right {
-            display: block;
-            width: 50%;
-        }
+        
 
     </style>
 </head>
