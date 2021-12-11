@@ -428,8 +428,24 @@ body {
 
 .contacts__content {
     grid-area: contacts__content;
+    display: flex;
+    justify-content: space-around;
+    padding: 3vw;
     background-color: #EAD1D0;
     border: 1px solid #282322;
+}
+
+.connection__container {
+    max-width: 80vw;
+}
+
+.social__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 20vw;
+    gap: 10px;
 }
 
 @media screen and (max-width: 1024px) {
