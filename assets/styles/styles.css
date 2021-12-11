@@ -428,23 +428,49 @@ body {
 
 .contacts__content {
     grid-area: contacts__content;
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
-    padding: 3vw;
+    padding: 3vw; */
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 90%) minmax(auto, 10%) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". connection__container social__container .";
     background-color: #EAD1D0;
     border: 1px solid #282322;
 }
 
 .connection__container {
-    max-width: 80vw;
+    grid-area: connection__container;
+    box-sizing: border-box;
+    padding: 5% 2%;
+}
+
+.contacts__text {
+    width: 50%;
+}
+
+.contact-form__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-input {
+    box-sizing: border-box;
+    padding: 13px 50px 13px 13px;
+    width: 50%;
+}
+
+.contacts__button {
+    width: 35%;
 }
 
 .social__container {
+    grid-area: social__container;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 20vw;
     gap: 10px;
 }
 
