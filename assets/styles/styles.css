@@ -429,6 +429,7 @@ body {
 .contacts__content {
     grid-area: contacts__content;
     background-color: #EAD1D0;
+    border: 1px solid #282322;
 }
 
 @media screen and (max-width: 1024px) {
