@@ -78,6 +78,7 @@ body {
     display: inline-flex;
     align-items: center;
     background: #282322;
+
 }
 
 .button a {
@@ -88,11 +89,22 @@ body {
     line-height: 140%;
     letter-spacing: 0em;
     text-align: center;
-    color: #FFFFFF;
+    color: #EAD1D0;
     text-decoration: none;
+    text-transform: uppercase;
+
 }
 
-/* .button:hover {} */
+.button:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    background: linear-gradient(#c7b2b1, #423a38);
+}
+
+.button:active {
+    background: linear-gradient(#5c514e, #695d5a) rgb(76, 77, 82);
+}
+
 
 /* = HEADER ================================================ */
 .header {
