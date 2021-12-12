@@ -505,13 +505,10 @@ body {
 
 .contacts__content {
     grid-area: contacts__content;
-    /* display: flex;
-    justify-content: space-around;
-    padding: 3vw; */
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 90%) minmax(auto, 10%) minmax(1rem, 1fr);
+    grid-template-columns: minmax(auto, 90%) minmax(auto, 10%);
     grid-template-areas:
-        ". connection__container social__container .";
+        "connection__container social__container";
     background-color: #EAD1D0;
     border: 1px solid #282322;
 }
@@ -519,7 +516,7 @@ body {
 .connection__container {
     grid-area: connection__container;
     box-sizing: border-box;
-    padding: 5% 2%;
+    padding: 2% 5%;
 }
 
 .contacts__text {
@@ -540,6 +537,8 @@ body {
 
 .contacts__button {
     width: 35%;
+    display: flex;
+    justify-content: center;
 }
 
 .social__container {
