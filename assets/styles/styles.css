@@ -28,6 +28,7 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #434242;
+    /* background-color: #fae8c757; */
 }
 
 /*H2*/
@@ -464,7 +465,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". services__content .";
-    /* background-color: #fae8c757; */
+    background-color: #fae8c757;
 }
 
 .services__content {
@@ -696,9 +697,8 @@ body {
 .certificates {
     grid-area: certificates;
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr);
-    grid-template-areas:
-        ". certificates__content .";
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas: ". certificates__content .";
 }
 
 .certificates__content {
@@ -715,7 +715,6 @@ body {
     justify-content: space-around;
     justify-items: center;
     align-items: center;
-
 }
 
 .certificates__title {
