@@ -8,54 +8,101 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap&subset=cyrillic-ext"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pacifico&display=swap&subset=cyrillic-ext"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <title>Юлия Попова</title>
-
-    <style>
-
-
-
-    </style>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__content color_white">
-                Блок header (Алена) test test test
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="#">
+                        Юлия Попова
+                    </a>
+                </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li><a href="" class="menu__link">Обо мне</a></li>
+                        <li><a href="" class="menu__link">Услуги</a></li>
+                        <li><a href="" class="menu__link">Проекты</a></li>
+                        <li><a href="" class="menu__link">Вопросы</a></li>
+                        <li><a href="" class="menu__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__social">
+                    <a href="https://instagram.com/yulia_popova29?utm_medium=copy_link" target="_blank"
+                        class="social__instagram">
+                        <img class="social__img" src="assets/images/block_header/Instagram_white.png"
+                            alt="instagram logo">
+                    </a>
+                    <a href="" class="social__telegram">
+                        <img class="social__img" src="assets/images/block_header/Telegram_white.png"
+                            alt="telegram logo">
+                    </a>
+                    <a href="" class="social__whatsapp">
+                        <img class="social__img" src="assets/images/block_header/WhatsApp_white.png"
+                            alt="whatsapp logo">
+                    </a>
+                </div>
             </div>
         </header>
         <main class="main">
             <div class="intro">
                 <div class="intro__content">
-                    <h2 class="intro__title title">Тестируем стили - Заголовок</h2>
-                    <h2 class="intro__title title title_underline">Тестируем стили - Заголовок c подчеркиванием</h2>
-                    <h3 class="intro__subtitle subtitle">Тестируем стили - Подзаголовок</h3>
-                    <div class="intro__text text">Первый блок - здесь будет большая фотография, название всего лендинга
-                        и завлекающая фраза (Алена)<br>
-                        Фон здесь и везде просто для наглядности: показать ширину основного контента - потом уберем.
-                        Этот первый блок, как и футер на всю ширину экрана (без ушей), остальные уже нормальные.
+                    <div class="intro__teaser">
+                        <h2 class="intro__title title">Юлия Попова <br> Фандрайзер</h2>
+                        <div class="intro__text text">
+                            <p>У вас есть проект, который решает социальную проблему?</p>
+                            <p>Занимаетесь любимым делом, которое приносит помощь обществу?</p>
+                            <p>Я помогу вам найти на этот проект средства и не тратить свои.</p>
+                            <p>Занимайтесь своим делом без выгорания!</p>
+                        </div>
+                        <div class="intro__button button">
+                            <a href="">Обратная связь</a>
+                        </div>
                     </div>
-                    <div class="intro__button button">
-                        <a href="">Кнопочка</a>
-                    </div>
-                </div>
-            </div>
-            <div class="about">
-                <div class="about__content">
-                    Блок "Обо мне" (Ксения)
                 </div>
             </div>
 
+            <div class="about">
+                <div class="about__content">
+
+                    <!-- Блок "Обо мне" (Алина) -->
+                    <div class="about-text__container">
+                        <div class="about__title title">обо мне</div>
+                        <p class="text">
+                            Меня зовут Юлия. <br>
+                            <br>
+                            Я живу на севере нашей страны. <br>
+                            <br>
+                            Я мама особого ребенка и основатель сети инклюзивных клубов в Архангельской области. <br>
+                            <br>
+                            Привлекла на проекты более чем 10 млн ... . <br>
+                            <br>
+                            Создатель двух ресурсных центров на малых территориях.
+                        </p>
+                        <!-- <div class="about__button button">
+                            <a href="">Связаться со мной</a>
+                        </div> -->
+                    </div>
+                    <div class="about-photo__container">
+                        <img class="about-photo" src="/assets/images/about/about-photo_fake.jfif" alt="Julia's photo">
+                    </div>
+                </div>
+            </div>
 
             <div class="services">
                 <div class="services__content">
-                    <div class="services__title title">
-                        <h2>Чем я могу быть полезна</h2>
-                    </div>
+                    <h2 class="services__title title">
+                        Чем я могу быть полезна
+                    </h2>
                     <div class="services__block">
                         <div class="services__column">
                             <div class="services__item">
@@ -91,7 +138,7 @@
                             </div>
                             <div class="services__item">
                                 <img class="icon" src="./assets/images/Tilda_Icons_16cf_handshake.svg" alt="icon">
-                                <p class="services__item__text text">Помощь в трудных вопросах, <br /> связанных с
+                                <p class="services__item__text text"> Помощь в трудных вопросах, <br /> связанных с
                                     проектами
                                 </p>
                             </div>
@@ -100,32 +147,32 @@
                 </div>
             </div>
 
-
-            <div class="gallery">
-                <div class="gallery__content">
-                    Блок "Галерея" (если Заказчица одобрит и предоставит фотографии)
-                </div>
-            </div>
-
             <!--Блок "Мои проекты, мои успехи" (Валерия) -->
             <div class="projects">
                 <div class="projects__content">
                     <div class="projects__content_left">
-                        <h2 class="intro__title title">Реализованные проекты</h2>
+                        <h2 class="projects__title title">Реализованные проекты</h2>
                         <div class="projects__list">
-                            <div class="project__image" style="background-image: url('/assets/images/block_projects/Zabota_photo.png');"></div>
+                            <div class="project__image"
+                                style="background-image: url('/assets/images/block_projects/Zabota_photo.png');"></div>
                             <div class="project__item">
-                                <a class="project__link" href="https://забота-клуб.рф" target="_blank">Инклюзивный клуб "Забота"</a>
+                                <a class="project__link" href="https://забота-клуб.рф" target="_blank">Инклюзивный клуб
+                                    "Забота"</a>
                             </div>
-                            <div class="project__image" id="img_1" style="background-image: url('/assets/images/block_projects/Zabota.png');"></div>
+                            <div class="project__image" id="img_1"
+                                style="background-image: url('/assets/images/block_projects/Zabota.png');"></div>
                             <div class="project__item">
-                                <a class="project__link" href="http://nko.plescy2020.tilda.ws" target="_blank">Плесецкий общественный ресурсный центр</a>
+                                <a class="project__link" href="http://nko.plescy2020.tilda.ws" target="_blank">Плесецкий
+                                    общественный ресурсный центр</a>
                             </div>
-                            <div class="project__image" style="background-image: url('/assets/images/block_projects/Plestsy.png');"></div>
+                            <div class="project__image"
+                                style="background-image: url('/assets/images/block_projects/Plestsy.png');"></div>
                             <div class="project__item">
-                                <a class="project__link" href="https://vk.com/norc_29" target="_blank">Няндомский общественный ресурсный центр</a>
+                                <a class="project__link" href="https://vk.com/norc_29" target="_blank">Няндомский
+                                    общественный ресурсный центр</a>
                             </div>
-                            <div class="project__image" style="background-image: url('/assets/images/block_projects/Nyandy.png');"></div>
+                            <div class="project__image"
+                                style="background-image: url('/assets/images/block_projects/Nyandy.png');"></div>
                         </div>
                     </div>
 
@@ -137,51 +184,141 @@
 
             <div class="certificates">
                 <div class="certificates__content">
-                    <h2 class="certificates__title">Грамоты и благодарности</h2>
+                    <h2 class="certificates__title title">Грамоты и благодарности</h2>
                     <div class="certificates__diplom">
                         <img src="./assets/images/blagodarstvennoe.png" alt="blagodarstvennoe">
                     </div>
-                    <div class="certificates__diplom__first" >
-                        <img  src="./assets/images/blagodarnost.png" alt="blagodarnost">
+                    <div class="certificates__diplom__first">
+                        <img src="./assets/images/blagodarnost.png" alt="blagodarnost">
                     </div>
-                    <div class="certificates__diplom__second" >
-                        <img  src="./assets/images/certificate.png" alt="certificate">
+                    <div class="certificates__diplom__second">
+                        <img src="./assets/images/certificate.png" alt="certificate">
                     </div>
-                    <div class="certificates__diplom__third" >
-                        <img  src="./assets/images/diplom.png" alt="diplom">
+                    <div class="certificates__diplom__third">
+                        <img src="./assets/images/diplom.png" alt="diplom">
                     </div>
-                    <div class="certificates__diplom__fourth" >
-                        <img  src="./assets/images/tetradkadruzbi.png" alt="diplom">
+                    <div class="certificates__diplom__fourth">
+                        <img src="./assets/images/tetradkadruzbi.png" alt="diplom">
                     </div>
                 </div>
-                <div class="feedback">
-                    <div class="feedback__content">
-                        <h2 class="feedback__title">Отзывы</h2>
-                        <div class="feedback__firstscreen">
-                            <img src="./assets/images/feedback1.png" alt="feedback1">
-                        </div>
-                        <div class="feedback__secondscreen" >
-                            <img  src="./assets/images/feedback2.png" alt="feedback2">
-                        </div>
-                    </div>
             </div>
+
+
+            <!-- <div class="feedback">
+                <div class="feedback__content">
+                    <h2 class="feedback__title title">Отзывы</h2>
+                    <div class="feedback__firstscreen">
+                        <img src="./assets/images/feedback1.png" alt="feedback1">
+                    </div>
+                    <div class="feedback__secondscreen">
+                        <img src="./assets/images/feedback2.png" alt="feedback2">
+                    </div>
+                </div>
+            </div> -->
+
             <div class="faq">
                 <div class="faq__content">
                     Блок "Вопросы/ответы" (если будем успевать и Заказчица одобрит идею)
                 </div>
             </div>
+
             <div class="contacts">
                 <div class="contacts__content">
-                    Блок "Контакты" (Алина)
+                    <div class="connection__container">
+                        <form class="contact-form__inputs" action="#" method="get">
+                            <h2 class="contacts__title title">КОНТАКТЫ</h2>
+                            <p class="contacts__text text">Заполните форму ниже, чтобы связаться со мной и обсудить
+                                ваш
+                                проект, или
+                                выберите любой
+                                другой способ. </p>
+                            <div>
+                                <input class="contact-input" type="text" name="username" value=""
+                                    placeholder="Ваше имя *" tabindex="1" required />
+                            </div>
+                            <div>
+                                <input class="contact-input" type="tel" name="userphone" value=""
+                                    placeholder="Ваш телефон *" tabindex="2" required />
+                            </div>
+                            <div>
+                                <textarea class="contact-input" name="comment" placeholder="Комментарий" id="" cols="30"
+                                    rows="2" tabindex="3"> </textarea>
+                            </div>
+                            <div class="contacts__button button">
+                                <a href="">Отправить заявку</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="social__container">
+                        <div class="phone social-icons">
+                            <a href="tel:89115994852" target="_blank">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="48px" viewBox="0 0 364 364" version="1.1">
+                                    <g id="surface1">
+                                        <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;"
+                                            d="M 182.082031 0 C 81.527344 0 0 81.527344 0 182.078125 C 0 282.628906 81.527344 364.160156 182.082031 364.160156 C 282.632812 364.160156 364.160156 282.628906 364.160156 182.078125 C 364.160156 81.527344 282.632812 0 182.082031 0 Z M 278.230469 265.675781 L 263.652344 280.257812 C 261.046875 282.855469 253.425781 284.476562 253.183594 284.476562 C 207.0625 284.878906 162.65625 266.761719 130.027344 234.132812 C 97.308594 201.394531 79.171875 156.832031 79.660156 110.554688 C 79.660156 110.535156 81.328125 103.128906 83.929688 100.554688 L 98.507812 85.972656 C 103.84375 80.613281 114.089844 78.191406 121.269531 80.59375 L 124.335938 81.617188 C 131.492188 84.015625 139.007812 91.929688 140.984375 99.222656 L 148.320312 126.136719 C 150.296875 133.449219 147.628906 143.851562 142.296875 149.1875 L 132.5625 158.921875 C 142.117188 194.304688 169.878906 222.070312 205.265625 231.648438 L 214.996094 221.914062 C 220.355469 216.554688 230.753906 213.886719 238.050781 215.863281 L 264.960938 223.222656 C 272.253906 225.226562 280.167969 232.695312 282.566406 239.847656 L 283.589844 242.960938 C 285.96875 250.117188 283.5625 260.363281 278.230469 265.675781 Z M 278.230469 265.675781 " />
+                                    </g>
+                                </svg>
+
+                            </a>
+                        </div>
+                        <div class="whatsapp social-icons">
+                            <a href="whatsapp://send?phone=89115994852" target="_blank">
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24 48C10.745 48 0 37.255 0 24S10.745 0 24 0s24 10.745 24 24-10.745 24-24 24Zm.791-10.648c7.869-.003 14.268-6.404 14.271-14.27a14.184 14.184 0 0 0-4.176-10.097A14.18 14.18 0 0 0 24.791 8.8c-7.866 0-14.268 6.402-14.271 14.27a14.246 14.246 0 0 0 1.905 7.135L10.4 37.6l7.565-1.985a14.26 14.26 0 0 0 6.82 1.737h.006Z"
+                                        fill="#000" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="m18.316 33.032-4.49 1.178 1.199-4.378-.282-.448a11.833 11.833 0 0 1-1.814-6.313c.003-6.54 5.324-11.86 11.867-11.86a11.78 11.78 0 0 1 8.386 3.478 11.79 11.79 0 0 1 3.47 8.392c-.002 6.54-5.323 11.861-11.86 11.861h-.006c-2.128 0-4.216-.572-6.037-1.653l-.433-.257Zm13.665-6.557c-.09-.149-.327-.238-.684-.416-.356-.179-2.11-1.041-2.436-1.16-.327-.12-.565-.179-.803.178-.237.357-.92 1.16-1.129 1.398-.208.238-.416.268-.772.09-.357-.18-1.506-.556-2.868-1.77-1.06-.946-1.776-2.114-1.984-2.47-.207-.358-.022-.55.157-.729.16-.16.357-.416.535-.624.178-.208.238-.357.356-.595.12-.238.06-.446-.03-.625-.088-.178-.802-1.933-1.099-2.647-.29-.696-.583-.602-.802-.613a14.21 14.21 0 0 0-.684-.012c-.237 0-.624.089-.95.446-.327.357-1.248 1.22-1.248 2.975 0 1.755 1.277 3.45 1.456 3.689.178.238 2.514 3.84 6.091 5.384.85.367 1.515.587 2.033.751.854.271 1.632.233 2.246.141.685-.102 2.11-.862 2.407-1.695.297-.833.297-1.547.208-1.696Z"
+                                        fill="#000" /></svg>
+                            </a>
+                        </div>
+                        <div class="insta social-icons">
+                            <a href="https://instagram.com/yulia_popova29?utm_medium=copy_link" target="_blank">
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 24C0 10.745 10.745 0 24 0s24 10.745 24 24-10.745 24-24 24S0 37.255 0 24Zm24.001-12.8c-3.476 0-3.912.015-5.278.077-1.362.063-2.293.279-3.106.595a6.268 6.268 0 0 0-2.268 1.476 6.284 6.284 0 0 0-1.477 2.267c-.318.814-.534 1.745-.595 3.107-.061 1.365-.077 1.802-.077 5.278 0 3.476.016 3.911.077 5.277.063 1.362.279 2.293.595 3.106a6.271 6.271 0 0 0 1.476 2.268 6.268 6.268 0 0 0 2.267 1.477c.814.317 1.745.532 3.107.595 1.366.062 1.802.077 5.278.077 3.476 0 3.911-.015 5.276-.077 1.363-.063 2.294-.278 3.109-.595a6.263 6.263 0 0 0 2.266-1.477 6.284 6.284 0 0 0 1.477-2.267c.315-.814.53-1.745.595-3.107.061-1.365.077-1.8.077-5.277 0-3.476-.016-3.912-.077-5.278-.064-1.363-.28-2.293-.595-3.107a6.283 6.283 0 0 0-1.477-2.267 6.256 6.256 0 0 0-2.267-1.476c-.816-.316-1.747-.532-3.11-.595-1.365-.062-1.8-.077-5.277-.077h.004Z"
+                                        fill="#000" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M22.853 13.507H24c3.418 0 3.823.012 5.172.073 1.249.057 1.926.266 2.377.441.597.232 1.023.51 1.471.957.448.448.725.875.958 1.473.175.45.384 1.127.44 2.375.062 1.35.075 1.755.075 5.171 0 3.416-.013 3.822-.074 5.17-.057 1.249-.266 1.926-.441 2.377a3.958 3.958 0 0 1-.958 1.47 3.958 3.958 0 0 1-1.47.958c-.452.176-1.13.384-2.377.44-1.35.062-1.755.075-5.173.075s-3.823-.013-5.172-.074c-1.248-.058-1.925-.266-2.377-.442a3.964 3.964 0 0 1-1.472-.957 3.967 3.967 0 0 1-.958-1.471c-.175-.45-.384-1.128-.44-2.376-.062-1.35-.074-1.755-.074-5.173s.012-3.821.073-5.17c.057-1.249.266-1.926.441-2.377.232-.598.51-1.024.958-1.472a3.973 3.973 0 0 1 1.472-.958c.451-.176 1.129-.384 2.377-.441 1.18-.054 1.638-.07 4.024-.072v.003Zm7.98 2.125a1.536 1.536 0 1 0 0 3.072 1.536 1.536 0 0 0 0-3.072Zm-6.832 1.795a6.574 6.574 0 1 0 0 13.147 6.574 6.574 0 0 0 0-13.147Z"
+                                        fill="#000" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.001 19.733a4.267 4.267 0 1 1 0 8.534 4.267 4.267 0 0 1 0-8.534Z"
+                                        fill="#000" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="mail social-icons">
+                            <a href="mailto:Popofffa08@mail.ru" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" xml:space="preserve">
+                                    <image width="48" height="48"
+                                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN RQflDAwDCBI8XTcxAAAEXklEQVRYw7WYy2sdZRjGf9/MnC5aKp6cpKSFGko1BhRCqovYXJsLahV0 owZDki4UsS4UBN34L7gQcSOGdCESDS6qBCFtUiFdxVpBEKSSaopWWhsTqTGQuTwuZk7OnMnMuYTm fTeHOd/3PO/7Xd7LZ6gkNuADYGjgCAX2A/+xyk3+RokxqWIqgIsAOMQAA5yghftxov881lnhKgss cBuwMJVIdoqFDUA/M9xFBCjSoOy3uMsM/ZFBVq3w4dAeLkcgHi5+DDgE93HxohGL9MTMqiIOkOcc Qvi4CeCkBrj4CHGOfDS7KnwXNxAeXkXouIZjV+iqRuEA43gIt2bworoIl/FKFA7wBsKLnK5XfTzE 2SwKB5hAeFVWvfKOeIiJNAob6MUtO4a7owhw6YkQt8UAjVxHu1yc8oUSyxQou8Q2MLmrrc3a7sm4 DzYwkLTeklOHWju9OFWiMMACip97I1OX1YnxHmI+RDbY+AxxgaAUSwziEZ4hR1DD1bdwmeUnDCp9 DLAY5iJ26MZ03H5L6LjWJG2oFtmQtKbj0cyYD9PFRTrMOrGI6QiNSpJeE2rQwQraIPS6JGk0mrl9 XMU6zaE7I+Xr7widkXRZ0lPldiXUEjotaVHSmXKCEHEELOAUxJevKOPM8g29BOQwKZojoJ9ZvmYi DUBAf0jQAclkIWCL57jCBTpwsXeYb+PyGHMs8Txu+t7DCbBopIXU1Ong8zTXWaAVL5FLbDzamOcX ThOk5xkDtFCwaCaffvx84A5D/Mu3HMWPwdj4tHCJfxhmlQo5P0+zRYEcmck/xx8MYjNHAR8Hg8HB p5E5xAA3sycbIEejxYH0LQ7FYx/X+Iw2znMQL/p2H1/RyiLL5CoVEwL2V6kEHLZ4krf4kjaW6CRH jif4jof5gBd5Bbd6EqYveUAcoQlJR4VQk27re6FO/SZpU5uSflWn0Hl5elAIPSBpInkPQu1zWMUl h3YuZPhhkjxdwBKtDNMNLHIRF3iVn5miN2t9hcHlDjRyKx4oSh4cE3pb0stCjqxYvDSyZAs9K+k9 oWNpHgSIWxQAlspzQZGgSe2SPhayI1hbjhzZEZUj9KGkdjWlEfiIpfC+/QDJuGyAQ0xzjTeBAIMB Anx8AsBExeg7LPMp+bSjGgBXQ4JL6Uf5Ix5ihE2szDxjs8koj/J+Wt4wETKp4XpsO1zbFTOZLfSu JGksI1yHGW2al0qxwCKgnSs4/M6+7Du4babHEVwe50eskic+Np8zgp2ZMgd5gX1VL1EoW8wwvzNl DjEfGp2a9OstVrKSPmSULXZdZUtipxJly14UXp9QVjwaoMAye1Y63tvid2tn8Qv3snzPbEIc4Cx7 1oAUKcajZmg3W+syRg1d2klW2F0TeLIafJEiz1TkdO1t7FRtbWx4oiygm0Vqb8S7qbkRh/qeEr6g LzIrs3rJ8iN8DGligEE6aCEfewxZ234M+YuKjyHZBCFJqWwrcJgCB4ANVvmT1ZQxKfI/Jr86C4wX Nr4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMTItMTJUMDA6MDg6MTgrMDM6MDD0RnBGAAAAJXRF WHRkYXRlOm1vZGlmeQAyMDIxLTEyLTEyVDAwOjA4OjE4KzAzOjAwhRvI+gAAAABJRU5ErkJggg==" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
+
         <footer class="footer">
             <div class="footer__content color_white">
-                блок footer (Софья)
+                <div class="footer__copyright">
+                    <p>©Copyright 2021</p>
+                </div>
+                <div class="footer__title title">
+                    <p>Юлия Попова</p>
+                </div>
+                <div class="footer__anchor">
+                    <a href="#top" class="footer_link">Наверх</a>
+                </div>
             </div>
         </footer>
-
+    </div>
+    <script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
