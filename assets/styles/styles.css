@@ -28,6 +28,7 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #434242;
+    /* background-color: #fae8c757; */
 }
 
 /*H2*/
@@ -464,7 +465,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". services__content .";
-    /* background-color: #fae8c757; */
+    background-color: #fae8c757;
 }
 
 .services__content {
@@ -672,7 +673,7 @@ body {
         "certificates__title certificates__title certificates__title"
         "certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth"
         "certificates__diplom  . certificates__diplom__second";
-    /* background-color: #EAD1D0; */
+    /*     background-color: #EAD1D0; */
     gap: 20px;
     padding: 20px;
     justify-content: space-around;
@@ -786,7 +787,7 @@ body {
     grid-template-areas:
         "feedback__title feedback__title feedback__title"
         "feedback__firstscreen . feedback__secondscreen";
-    /* background-color: #EAD1D0; */
+    /*     background-color: #EAD1D0; */
     padding: 20px;
     justify-content: space-around;
     justify-items: center;
