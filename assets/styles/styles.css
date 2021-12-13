@@ -563,7 +563,6 @@ body {
 
 .projects__content {
     grid-area: projects__content;
-
     display: flex;
     /* flex-direction: row; */
     flex-direction: column;
