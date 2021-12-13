@@ -655,32 +655,124 @@ body {
 }
 
 /* = CERTIFICATES ================================================ */
+
+
 .certificates {
     grid-area: certificates;
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr);
     grid-template-areas:
         ". certificates__content .";
 }
 
 .certificates__content {
     grid-area: certificates__content;
-    background-color: #e9d5b1a9;
+    display: grid;
+    grid-template-columns: minmax(auto, 500px) minmax(auto-fit) minmax(auto, 500px);
+    grid-template-areas:
+        "certificates__title certificates__title certificates__title"
+        "certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth"
+        "certificates__diplom  . certificates__diplom__second";
+/*     background-color: #EAD1D0; */
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+
 }
 
-@media screen and (max-width: 1024px) {
-    .certificates {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
-    }
+.certificates__title {
+    grid-area: certificates__title;
 }
+
+.certificates__diplom {
+    grid-area: certificates__diplom;
+
+}
+
+.certificates__diplom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.certificates__diplom__first {
+    grid-area: certificates__diplom__first;
+}
+
+.certificates__diplom__first img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.certificates__diplom__second {
+    grid-area: certificates__diplom__second;
+
+
+}
+
+.certificates__diplom__second img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.certificates__diplom__third {
+    grid-area: certificates__diplom__third;
+}
+
+.certificates__diplom__third img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.certificates__diplom__fourth {
+    grid-area: certificates__diplom__fourth;
+}
+
+.certificates__diplom__fourth img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .certificates {
+        grid-area: certificates;
+        display: grid;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". certificates__content .";
+    }
+
+
+    .certificates__content {
+        grid-area: certificates__content;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-areas:
+            "certificates__title"
+            "certificates__diplom__third"
+            "certificates__diplom__first"
+            "certificates__diplom__fourth"
+            "certificates__diplom"
+            "certificates__diplom__second";
+        row-gap: 20px;
     }
 }
 
 /* = FEEDBACK ================================================ */
+
 .feedback {
     grid-area: feedback;
     display: grid;
@@ -691,19 +783,64 @@ body {
 
 .feedback__content {
     grid-area: feedback__content;
-    background-color: #e9d5b1a9;
+    display: grid;
+    grid-template-columns: minmax(auto, 500px) 20px minmax(auto, 500px);
+    grid-template-areas:
+        "feedback__title feedback__title feedback__title"
+        "feedback__firstscreen . feedback__secondscreen";
+/*     background-color: #EAD1D0; */
+    padding: 20px;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
 }
 
-@media screen and (max-width: 1024px) {
-    .feedback {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
-    }
+.feedback__title {
+    grid-area: feedback__title;
+}
+
+.feedback__firstscreen {
+    grid-area: feedback__firstscreen;
+}
+
+.feedback__firstscreen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.feedback__secondscreen {
+    grid-area: feedback__secondscreen;
+}
+
+.feedback__secondscreen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 @media screen and (max-width: 768px) {
     .feedback {
+        grid-area: feedback;
+        display: grid;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". feedback__content .";
     }
+
+    .feedback__content {
+        grid-area: feedback__content;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-areas:
+            "feedback__title"
+            "feedback__firstscreen"
+            "feedback__secondscreen";
+        row-gap: 20px;
+    }
+
 }
 
 /* = FAQ ================================================ */
