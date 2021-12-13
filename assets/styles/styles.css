@@ -77,7 +77,8 @@ body {
 .button {
     display: inline-flex;
     align-items: center;
-    background: #282322;
+    background: #b19b7bc9;
+
 }
 
 .button a {
@@ -90,9 +91,20 @@ body {
     text-align: center;
     color: #FFFFFF;
     text-decoration: none;
+    text-transform: uppercase;
+
 }
 
-/* .button:hover {} */
+.button:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    background: linear-gradient(#f0ddbba9, #806f56);
+}
+
+.button:active {
+    background: linear-gradient(#817157, #948164) rgb(76, 77, 82);
+}
+
 
 /* = HEADER ================================================ */
 /* - Позиционирование -------------------------------------- */
@@ -106,7 +118,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". header__content .";
-    background-color: #3a2d34;
+    background-color: #b19b7bc9;
 }
 
 .header__content {
@@ -115,9 +127,9 @@ body {
     min-height: 80px;
     align-items: center;
     padding-top: 16px;
-    grid-template-columns: minmax(auto, 120px)  minmax(auto, 960px) minmax(auto, 120px);
+    grid-template-columns: minmax(auto, 120px) minmax(auto, 960px) minmax(auto, 120px);
     grid-template-areas:
-    ". header__menu header__social";
+        ". header__menu header__social";
 }
 
 .header::before {
@@ -183,7 +195,7 @@ body {
 }
 
 /* - Медиазапросы ------------------------------------------ */
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1023px) {
     body.lock {
         overflow: hidden;
     }
@@ -194,14 +206,14 @@ body {
 
     .header__content {
         grid-area: header__container;
-        display:grid;
+        display: grid;
         min-height: 60px;
         width: 100%;
         align-items: center;
         padding-top: 16px;
         grid-template-columns: minmax(auto, 60px) minmax(auto, 933px);
         grid-template-areas:
-        "header__logo header__burger";
+            "header__logo header__burger";
     }
 
     .header__burger {
@@ -236,13 +248,13 @@ body {
     .header__burger.active::before {
         transform: rotate(45deg);
         top: 9px;
-        background-color:#282322;
+        background-color: #282322;
     }
 
     .header__burger.active::after {
         transform: rotate(-45deg);
         bottom: 9px;
-        background-color:#282322;
+        background-color: #282322;
     }
 
     .header__burger span {
@@ -270,14 +282,14 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        text-align:center;
+        text-align: center;
         transition: all 0.3s ease 0s;
         overflow: auto;
         background: #FFFFFF;
         background-attachment: local;
     }
 
-    .header__menu.active{
+    .header__menu.active {
         top: 0;
     }
 
@@ -295,7 +307,7 @@ body {
     }
 
     .menu__link {
-        color:#282322;
+        color: #282322;
         font-size: 24px;
         font-weight: 600;
         line-height: 140%;
@@ -370,7 +382,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". intro__content .";
-    background-color: #EAD1D0;
+    /* background-color: #fae8c757; */
 }
 
 .intro__content {
@@ -404,7 +416,7 @@ body {
     grid-template-columns: minmax(auto, 67%) minmax(auto, 33%);
     grid-template-areas:
         "about-text__container about-photo__container";
-    background-color: #EAD1D0;
+    /* background-color: #fae8c757; */
 }
 
 .about-text__container {
@@ -452,11 +464,12 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". services__content .";
+    /* background-color: #fae8c757; */
 }
 
 .services__content {
     grid-area: services__content;
-    background-color: #EAD1D0;
+
     display: flex;
     flex-direction: column;
 }
@@ -489,7 +502,6 @@ body {
 
 .services__item {
     display: flex;
-    /* border: 1px solid red; */
     height: 150px;
     /* margin-left: 30px; */
     align-self: center;
@@ -523,7 +535,7 @@ body {
 
 .gallery__content {
     grid-area: gallery__content;
-    background-color: #EAD1D0;
+    background-color: #e9d5b1a9;
 }
 
 @media screen and (max-width: 1024px) {
@@ -545,11 +557,12 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". projects__content .";
+    /* background-color: #fae8c757; */
 }
 
 .projects__content {
     grid-area: projects__content;
-    background-color: #EAD1D0;
+
     display: flex;
     flex-direction: row;
     position: relative;
@@ -660,12 +673,13 @@ body {
         "certificates__title certificates__title certificates__title"
         "certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth"
         "certificates__diplom  . certificates__diplom__second";
-    background-color: #EAD1D0;
+/*     background-color: #EAD1D0; */
     gap: 20px;
     padding: 20px;
     justify-content: space-around;
     justify-items: center;
     align-items: center;
+
 }
 
 .certificates__title {
@@ -774,7 +788,7 @@ body {
     grid-template-areas:
         "feedback__title feedback__title feedback__title"
         "feedback__firstscreen . feedback__secondscreen";
-    background-color: #EAD1D0;
+/*     background-color: #EAD1D0; */
     padding: 20px;
     justify-content: space-around;
     justify-items: center;
@@ -840,7 +854,7 @@ body {
 
 .faq__content {
     grid-area: faq__content;
-    background-color: #EAD1D0;
+    background-color: #e9d5b1a9;
 }
 
 @media screen and (max-width: 1024px) {
@@ -870,7 +884,7 @@ body {
     grid-template-columns: minmax(auto, 90%) minmax(auto, 10%);
     grid-template-areas:
         "connection__container social__container";
-    background-color: #EAD1D0;
+    background-color: #fae8c757;
     border: 1px solid #282322;
 }
 
@@ -930,11 +944,21 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". footer__content .";
-    background-color: #3a2d34;
+    background-color: #b19b7bc9;
 }
 
 .footer__content {
     grid-area: footer__content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__anchor {
+    align-self: center;
+}
+
+.footer__copyright {
+    align-self: center;
 }
 
 @media screen and (max-width: 1024px) {
