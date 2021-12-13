@@ -205,7 +205,37 @@ body {
 
 .about__content {
     grid-area: about__content;
+    display: grid;
+    grid-template-columns: minmax(auto, 67%) minmax(auto, 33%);
+    grid-template-areas:
+        "about-text__container about-photo__container";
     background-color: #EAD1D0;
+}
+
+.about-text__container {
+    grid-area: about-text__container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 5%;
+}
+
+/* .about__button {
+    width: 30%;
+} */
+
+.about-photo__container {
+    grid-area: about-photo__container;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo {
+    box-sizing: border-box;
+    max-width: 100%;
+    border: 1px solid #282322;
+    padding: 3%;
 }
 
 @media screen and (max-width: 1024px) {
