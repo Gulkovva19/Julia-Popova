@@ -493,16 +493,37 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .intro {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
     }
+
 }
 
 @media screen and (max-width: 500px) {
     .intro {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+        grid-area: intro;
+        display: grid;
         outline: none;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 480px) minmax(1rem, 1fr);
+        grid-template-rows: 800px 500px;
+        grid-template-areas:
+            ". . ."
+            "intro__content intro__content intro__content";
+        background: url("/assets/images/block_intro/intro-example1-small.jpeg") 50%/cover no-repeat;
+    }
+
+    .intro__content {
+        grid-area: intro__content;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        outline:1px solid #b19b7bc9;
+        outline-offset: -10px;
+        background-color: #FFFFFF;
+    }
+
+    .intro__title, .intro__text, .intro__title::first-line {
+        color: #434242;
     }
 }
 
