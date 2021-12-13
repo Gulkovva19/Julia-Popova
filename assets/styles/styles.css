@@ -134,6 +134,7 @@ body {
 .header__logo {
     grid-area: header__logo;
     align-self: center;
+    z-index: 3;
 }
 
 .header__burger {
@@ -162,6 +163,7 @@ body {
 .header__social {
     grid-area: header__social;
     display: flex;
+    z-index: 3;
 }
 
 .social__img {
