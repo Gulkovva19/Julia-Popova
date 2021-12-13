@@ -24,26 +24,46 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__content color_white">
-                Блок header (Алена) test test test
+            <div class="header__content">
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li><a href="" class="menu__link">Обо мне</a></li>
+                        <li><a href="" class="menu__link">Услуги</a></li>
+                        <li><a href="" class="menu__link">Проекты</a></li>
+                        <li><a href="" class="menu__link">Сертификаты</a></li>
+                        <li><a href="" class="menu__link">Отзывы</a></li>
+                        <li><a href="" class="menu__link">Вопросы</a></li>
+                    </ul>
+                </nav>
+                <div class="header__social">
+                    <a href class="social__instagram">
+                        <img class="social__img" src="assets/images/block_header/instagram.png" alt="instagram logo">
+                    </a>
+                    <a href class="social__telegram">
+                        <img class="social__img"src="assets/images/block_header/telegram.png" alt="telegram logo">
+                    </a>
+                </div>
             </div>
         </header>
         <main class="main">
             <div class="intro">
                 <div class="intro__content">
-                    <h2 class="intro__title title">Тестируем стили - Заголовок</h2>
-                    <h2 class="intro__title title title_underline">Тестируем стили - Заголовок c подчеркиванием</h2>
-                    <h3 class="intro__subtitle subtitle">Тестируем стили - Подзаголовок</h3>
-                    <div class="intro__text text">Первый блок - здесь будет большая фотография, название всего лендинга
-                        и завлекающая фраза (Алена)<br>
-                        Фон здесь и везде просто для наглядности: показать ширину основного контента - потом уберем.
-                        Этот первый блок, как и футер на всю ширину экрана (без ушей), остальные уже нормальные.
+                    <h2 class="intro__title title">Юлия Попова <br> Фандрейзер</h2>
+                    <div class="intro__text text">
+                        <p>У вас есть проект, который решает социальную проблему?</p>
+                        <p>Занимаетесь любимым делом, которое приносит помощь обществу?</p>
+                        <p>Я помогу вам найти на этот проект средства и не тратить свои.</p>
+                        <p>Занимайтесь своим делом без выгорания!</p>
                     </div>
                     <div class="intro__button button">
-                        <a href="">Кнопочка</a>
+                        <a href="">Обратная связь</a>
                     </div>
                 </div>
             </div>
+
             <div class="about">
                 <div class="about__content">
 
@@ -260,7 +280,8 @@
                 блок footer (Софья)
             </div>
         </footer>
-
+        <script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>
