@@ -225,7 +225,10 @@
             <div class="contacts">
                 <div class="contacts__content">
                     <div class="connection__container">
-                        <form class="contact-form__inputs" action="#" method="get">
+
+
+
+                        <form class="contact-form__inputs" action="send.php" method="post">
                             <h2 class="contacts__title title">КОНТАКТЫ</h2>
                             <p class="contacts__text text">Заполните форму ниже, чтобы связаться со мной и обсудить
                                 ваш
@@ -233,21 +236,25 @@
                                 выберите любой
                                 другой способ. </p>
                             <div>
-                                <input class="contact-input" type="text" name="username" value=""
-                                    placeholder="Ваше имя *" tabindex="1" required />
+                                <input class="contact-input" type="text" name="name" value="" placeholder="Ваше имя *"
+                                    tabindex="1" required />
                             </div>
                             <div>
-                                <input class="contact-input" type="tel" name="userphone" value=""
+                                <input class="contact-input" type="tel" name="phone" value=""
                                     placeholder="Ваш телефон *" tabindex="2" required />
                             </div>
-                            <div>
+                            <!-- <div>
                                 <textarea class="contact-input" name="comment" placeholder="Комментарий" id="" cols="30"
                                     rows="2" tabindex="3"> </textarea>
-                            </div>
+                            </div> -->
+                            <input type="submit" class="btn">
                             <div class="contacts__button button">
                                 <a href="">Отправить заявку</a>
                             </div>
                         </form>
+
+
+
                     </div>
                     <div class="social__container">
                         <div class="phone social-icons">
