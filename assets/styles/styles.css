@@ -43,10 +43,6 @@ body {
     text-transform: uppercase;
 }
 
-.title_underline {
-    text-decoration: underline;
-}
-
 /*H3*/
 .subtitle {
     font-family: 'Montserrat', sans-serif;
@@ -70,16 +66,11 @@ body {
     color: #282322;
 }
 
-.color_white {
-    color: #FFFFFF;
-}
-
 /* - Оформление: ссылки, кнопки ---------------------------- */
 .button {
     display: inline-flex;
     align-items: center;
     background: #b19b7bc9;
-
 }
 
 .button a {
@@ -93,7 +84,6 @@ body {
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
-
 }
 
 .button:hover {
@@ -105,7 +95,6 @@ body {
 .button:active {
     background: linear-gradient(#817157, #948164) rgb(76, 77, 82);
 }
-
 
 /* = HEADER ================================================ */
 /* - Позиционирование -------------------------------------- */
@@ -119,18 +108,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". header__content .";
-    background-color: #b19b7bc9;
-}
-
-.header__content {
-    grid-area: header__content;
-    display: grid;
-    min-height: 80px;
-    align-items: center;
-    padding-top: 16px;
-    grid-template-columns: minmax(auto, 120px) minmax(auto, 960px) minmax(auto, 120px);
-    grid-template-areas:
-        ". header__menu header__social";
+    /*background-color: #b19b7bc9;*/
 }
 
 .header::before {
@@ -143,18 +121,20 @@ body {
     z-index: 2;
 }
 
-.header__social {
-    grid-area: header__social;
-    display: inline-flex;
-    position: relative;
-    z-index: 3;
+.header__content {
+    grid-area: header__content;
+    display: grid;
+    min-height: 80px;
+    align-items: center;
+    grid-template-columns: minmax(auto, 170px) minmax(auto, 880px) minmax(auto, 150px);
+    grid-template-areas:
+        "header__logo header__menu header__social";
 }
 
-.social__img {
-    max-width: 30px;
-    display: block;
-    object-fit: cover;
-    padding-left: 20px;
+.header__logo {
+    grid-area: header__logo;
+    align-self: center;
+    z-index: 3;
 }
 
 .header__burger {
@@ -164,6 +144,7 @@ body {
 .header__menu {
     grid-area: header__menu;
     justify-self: center;
+    margin-top: 8px;
 }
 
 .menu__list {
@@ -179,11 +160,24 @@ body {
     margin-right: 50px;
 }
 
+.header__social {
+    grid-area: header__social;
+    display: flex;
+    z-index: 3;
+}
+
+.social__img {
+    max-width: 30px;
+    display: block;
+    object-fit: cover;
+    padding-left: 20px;
+}
+
 /* - Типографика ------------------------------------------- */
 .menu__link {
     font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 140%;
     text-align: center;
@@ -191,8 +185,16 @@ body {
     text-transform: uppercase;
 }
 
-.menu__link:hover {
-    text-decoration: underline 2px #025f3b;
+.header__logo a {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 /* - Медиазапросы ------------------------------------------ */
@@ -201,20 +203,32 @@ body {
         overflow: hidden;
     }
 
+    .header {
+        height: 60px;
+    }
+
     .header.active {
         position: fixed;
     }
 
     .header__content {
-        grid-area: header__container;
+        grid-area: header__content;
         display: grid;
         min-height: 60px;
         width: 100%;
         align-items: center;
-        padding-top: 16px;
-        grid-template-columns: minmax(auto, 60px) minmax(auto, 933px);
+        grid-template-columns: minmax(auto, 170px) minmax(auto, 653px) minmax(auto, 170px);
         grid-template-areas:
-            "header__logo header__burger";
+            "header__logo header__burger header__social";
+    }
+
+    .header.active .header__content {
+        grid-area: header__content;
+        display: grid;
+        width: 100%;
+        align-items: center;
+        grid-template-columns: minmax(auto, 823px) minmax(auto, 170px);
+        grid-template-areas: "header__logo header__burger";
     }
 
     .header__burger {
@@ -296,11 +310,11 @@ body {
 
     .menu__list {
         display: block;
-        padding-top: 108px;
+        padding-top: 110px;
     }
 
     .menu__list li {
-        margin: 0px 0px 40px 0px;
+        margin: 0px 0px 50px 0px;
     }
 
     .menu__list li:not(:last-of-type) {
@@ -313,6 +327,36 @@ body {
         font-weight: 600;
         line-height: 140%;
         text-align: center;
+    }
+
+    .header__social.active {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        grid-area: header;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-areas: ". header__content .";
+    }
+
+    .header__content {
+        grid-area: header__content;
+        grid-template-columns: minmax(auto, 170px) minmax(auto, 407px) minmax(auto, 170px);
+        grid-template-areas: "header__logo header__burger header__social";
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header__social {
+        display: none;
+    }
+
+    .header__content {
+        grid-area: header__content;
+        grid-template-columns: 1fr minmax(auto, 170px);
+        grid-template-areas: "header__logo header__burger";
     }
 }
 
@@ -332,7 +376,6 @@ body {
         "faq"
         "contacts";
 }
-
 
 .intro,
 .about,
@@ -377,28 +420,89 @@ body {
 }
 
 /* = INTRO ================================================ */
+/* - Позиционирование -------------------------------------- */
 .intro {
     grid-area: intro;
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". intro__content .";
-    /* background-color: #fae8c757; */
+    background: url("/assets/images/block_intro/intro-example1.jpeg") 50%/cover no-repeat;
+    min-height: 100vh;
+    margin-top: -80px;
+    outline:1px solid #FFFFFF;
+    outline-offset: -70px;
 }
 
 .intro__content {
     grid-area: intro__content;
+    display: grid;
+    grid-template-columns: minmax(auto, 700px) minmax(auto, 500px);
+    grid-template-areas:
+        ". intro__teaser";
 }
 
-@media screen and (max-width: 1024px) {
+.intro__teaser{
+    grid-area: intro__teaser;
+    align-self: center;
+}
+
+.intro__title {
+    margin: 0px 0px 5vh 0px;
+}
+
+.intro__text {
+    margin: 0px 50px 10vh 0px;
+}
+
+.intro__button {
+    display: inline-flex;
+}
+
+/* - Типографика ------------------------------------------- */
+.intro__title::first-line {
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.intro__title {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 180%;
+    color: #FFFFFF;
+}
+
+.intro__text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1023px) {
     .intro {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+        outline:1px solid #FFFFFF;
+        outline-offset: -60px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .intro {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .intro {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+        outline: none;
     }
 }
 
