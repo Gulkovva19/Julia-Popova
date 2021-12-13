@@ -16,7 +16,37 @@
 
     <style>
 
-        
+    .projects .projects__content .projects__result {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects .projects__content .subtitle {
+        text-align: center;
+    }
+
+    .projects .projects__content .projects__result .result__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+
+    .projects .projects__content .result__content .result__img {
+        margin-top: 15px;
+        max-height: 120px;
+        /* width: 150px; */
+        transition: 1s;
+        filter: alpha (Opacity=50);
+        opacity: 0.5;    
+    }
+
+    .projects .projects__content .result__content .result__img:hover {
+        transform: scale(1.5, 1.5);
+        filter: alpha (Opacity=100);
+        opacity: 1;
+    }
 
     </style>
 </head>
@@ -131,6 +161,16 @@
 
                     <div class="projects__content_right">
                         
+                    </div>
+
+                    <div class="projects__result">
+                        <h3 class="subtitle">Результаты участия в конкурсах</h3>
+                        <div class="result__content">
+                            <img class="result__img" src="/assets/images/block_projects/result_1.png" alt="result" />
+                            <img class="result__img" src="/assets/images/block_projects/result_2.png" alt="result" />
+                            <img class="result__img" src="/assets/images/block_projects/result_3.png" alt="result" />
+                            <img class="result__img" src="/assets/images/block_projects/result_4.png" alt="result" />
+                        </div>
                     </div>
                 </div>
             </div>
