@@ -436,7 +436,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". intro__content .";
-    background: url("/assets/images/block_intro/intro-example1.jpeg") 50%/cover no-repeat;
+    background: url("/assets/images/block_intro/intro-example5.jpg") 50%/cover no-repeat;
     min-height: 100vh;
     margin-top: -80px;
     outline: 1px solid #FFFFFF;
@@ -519,7 +519,7 @@ body {
         grid-template-areas:
             ". . ."
             "intro__content intro__content intro__content";
-        background: url("/assets/images/block_intro/intro-example1-small.jpeg") 50%/cover no-repeat;
+       /* background: url("/assets/images/block_intro/intro-example1-small.jpeg") 50%/cover no-repeat;*/
     }
 
     .intro__content {
