@@ -226,9 +226,7 @@
                 <div class="contacts__content">
                     <div class="connection__container">
 
-
-
-                        <form class="contact-form__inputs" action="send.php" method="post">
+                        <form class="contact-form__inputs" action="//" method="">
                             <h2 class="contacts__title title">КОНТАКТЫ</h2>
                             <p class="contacts__text text">Заполните форму ниже, чтобы связаться со мной и обсудить
                                 ваш
@@ -236,18 +234,14 @@
                                 выберите любой
                                 другой способ. </p>
                             <div>
-                                <input class="contact-input" type="text" name="name" value="" placeholder="Ваше имя *"
-                                    tabindex="1" required />
+                                <input class="contact-input" type="text" name="user_name" value=""
+                                    placeholder="Ваше имя *" tabindex="1" required />
+
                             </div>
                             <div>
-                                <input class="contact-input" type="tel" name="phone" value=""
+                                <input class="contact-input" type="tel" name="user_email" value=""
                                     placeholder="Ваш телефон *" tabindex="2" required />
                             </div>
-                            <!-- <div>
-                                <textarea class="contact-input" name="comment" placeholder="Комментарий" id="" cols="30"
-                                    rows="2" tabindex="3"> </textarea>
-                            </div> -->
-                            <input type="submit" class="btn">
                             <div class="contacts__button button">
                                 <a href="">Отправить заявку</a>
                             </div>
@@ -260,12 +254,8 @@
                         <div class="phone social-icons">
                             <a href="tel:89115994852" target="_blank">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="48px" height="48px" viewBox="0 0 364 364" version="1.1">
-                                    <g id="surface1">
-                                        <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;"
-                                            d="M 182.082031 0 C 81.527344 0 0 81.527344 0 182.078125 C 0 282.628906 81.527344 364.160156 182.082031 364.160156 C 282.632812 364.160156 364.160156 282.628906 364.160156 182.078125 C 364.160156 81.527344 282.632812 0 182.082031 0 Z M 278.230469 265.675781 L 263.652344 280.257812 C 261.046875 282.855469 253.425781 284.476562 253.183594 284.476562 C 207.0625 284.878906 162.65625 266.761719 130.027344 234.132812 C 97.308594 201.394531 79.171875 156.832031 79.660156 110.554688 C 79.660156 110.535156 81.328125 103.128906 83.929688 100.554688 L 98.507812 85.972656 C 103.84375 80.613281 114.089844 78.191406 121.269531 80.59375 L 124.335938 81.617188 C 131.492188 84.015625 139.007812 91.929688 140.984375 99.222656 L 148.320312 126.136719 C 150.296875 133.449219 147.628906 143.851562 142.296875 149.1875 L 132.5625 158.921875 C 142.117188 194.304688 169.878906 222.070312 205.265625 231.648438 L 214.996094 221.914062 C 220.355469 216.554688 230.753906 213.886719 238.050781 215.863281 L 264.960938 223.222656 C 272.253906 225.226562 280.167969 232.695312 282.566406 239.847656 L 283.589844 242.960938 C 285.96875 250.117188 283.5625 260.363281 278.230469 265.675781 Z M 278.230469 265.675781 " />
-                                    </g>
+                                <svg class="icon">
+                                    <use xlink:href="assets/images/contacts/#phone.svg"></use>
                                 </svg>
 
                             </a>
