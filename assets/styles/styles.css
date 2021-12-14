@@ -113,7 +113,6 @@ body {
 
 .header::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -160,6 +159,11 @@ body {
     margin-right: 50px;
 }
 
+.menu__list li:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
 .header__social {
     grid-area: header__social;
     display: flex;
@@ -171,6 +175,11 @@ body {
     display: block;
     object-fit: cover;
     padding-left: 20px;
+}
+
+.social__img:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 /* - Типографика ------------------------------------------- */
