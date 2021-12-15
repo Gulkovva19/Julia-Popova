@@ -74,6 +74,11 @@ body {
     background: #b19b7bc9;
 }
 
+.button_transparent {
+    background: none;
+    border: solid 1px #FFFFFF;
+}
+
 .button a {
     padding: 13px 42px;
     font-family: 'Montserrat', sans-serif;
@@ -227,9 +232,9 @@ body {
         min-height: 60px;
         width: 100%;
         align-items: center;
-        grid-template-columns: minmax(auto, 170px) minmax(auto, 653px) minmax(auto, 170px);
+        grid-template-columns: minmax(auto, 50px) minmax(auto, 773px) minmax(auto, 170px);
         grid-template-areas:
-            "header__logo header__burger header__social";
+            "header__burger header__logo header__social";
     }
 
     .header.active .header__content {
@@ -237,8 +242,8 @@ body {
         display: grid;
         width: 100%;
         align-items: center;
-        grid-template-columns: minmax(auto, 823px) minmax(auto, 170px);
-        grid-template-areas: "header__logo header__burger";
+        grid-template-columns: minmax(auto, 170px) minmax(auto, 823px);
+        grid-template-areas: "header__burger header__logo";
     }
 
     .header__burger {
@@ -248,7 +253,7 @@ body {
         width: 30px;
         height: 20px;
         z-index: 3;
-        justify-self: right;
+        justify-self: left;
     }
 
     .header__burger::before,
@@ -353,20 +358,68 @@ body {
 
     .header__content {
         grid-area: header__content;
-        grid-template-columns: minmax(auto, 170px) minmax(auto, 407px) minmax(auto, 170px);
-        grid-template-areas: "header__logo header__burger header__social";
+        grid-template-columns: minmax(auto, 50px) minmax(auto, 527px) minmax(auto, 170px);
+        grid-template-areas: "header__burger header__logo header__social";
+    }
+
+    .header__social {
+        grid-area: header__social;
+        justify-self: right;
+    }
+
+    .header__logo {
+        justify-self: left;
+    }
+
+    .header__burger {
+        grid-area: header__burger;
+        justify-self: left;
     }
 }
 
 @media screen and (max-width: 500px) {
+    .header__content {
+        grid-area: header__content;
+        grid-template-columns: minmax(auto, 170px) 1fr minmax(auto, 170px);
+        grid-template-areas: "header__burger header__logo header__social";
+    }
+
     .header__social {
-        display: none;
+        grid-area: header__social;
+        justify-self: right;
+    }
+
+    .header__logo {
+        justify-self: center;
+    }
+
+    .header__logo a {
+        font-family: 'Pacifico', cursive;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .header__burger {
+        grid-area: header__burger;
+        justify-self: left;
+    }
+
+    .social__img {
+        max-width: 40px;
+    }
+
+    .header__burger {
+        margin-right: 20px;
     }
 
     .header__content {
-        grid-area: header__content;
-        grid-template-columns: 1fr minmax(auto, 170px);
-        grid-template-areas: "header__logo header__burger";
+        padding-top: 15px;
     }
 }
 
@@ -437,7 +490,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". intro__content .";
-    background: url("/assets/images/block_intro/intro-example5.jpg") 50%/cover no-repeat;
+    background: url("/assets/images/block_intro/sansbg.png") 100% 100%/contain no-repeat, #baa8a6;
     min-height: 100vh;
     margin-top: -80px;
     outline: 1px solid #FFFFFF;
@@ -447,18 +500,26 @@ body {
 .intro__content {
     grid-area: intro__content;
     display: grid;
-    grid-template-columns: minmax(auto, 700px) minmax(auto, 500px);
+    grid-template-columns: minmax(auto, 100px) minmax(auto, 1000px) minmax(auto, 100px);
     grid-template-areas:
-        ". intro__teaser";
+        ". intro__teaser .";
 }
 
 .intro__teaser {
     grid-area: intro__teaser;
     align-self: center;
+    text-align: left;
+    padding-right: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .intro__title {
     margin: 0px 0px 5vh 0px;
+}
+
+.intro__title_alternative {
+    display: none;
 }
 
 .intro__text {
@@ -477,7 +538,6 @@ body {
     font-weight: 400;
     line-height: 130%;
     letter-spacing: 0em;
-    text-align: left;
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -486,12 +546,14 @@ body {
     font-size: 26px;
     font-weight: 500;
     line-height: 180%;
+    text-align: left;
     color: #FFFFFF;
 }
 
 .intro__text {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 150%;
+    text-align: left;
     color: #FFFFFF;
 }
 
@@ -503,11 +565,29 @@ body {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .intro {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+        outline: none;
+        min-height: 100vh;
     }
 
+    .intro__content {
+        grid-area: intro__content;
+        display: grid;
+        grid-template-columns: minmax(auto, 20px) minmax(auto, 728px) minmax(auto, 20px);
+        grid-template-areas:
+            ". intro__teaser .";
+    }
+
+    .intro__title {
+        display: none;
+    }
+
+    .intro__title_alternative {
+        display:flex;
+        color: #FFFFFF;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -516,27 +596,28 @@ body {
         display: grid;
         outline: none;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 480px) minmax(1rem, 1fr);
-        grid-template-rows: 800px 500px;
         grid-template-areas:
-            ". . ."
-            "intro__content intro__content intro__content";
-        /* background: url("/assets/images/block_intro/intro-example1-small.jpeg") 50%/cover no-repeat;*/
+        "intro__content intro__content intro__content";
+
     }
 
     .intro__content {
         grid-area: intro__content;
-        grid-template-columns: 1fr;
-        padding: 10px;
-        outline: 1px solid #b19b7bc9;
-        outline-offset: -10px;
-        background-color: #FFFFFF;
+        display: grid;
+        grid-template-columns: minmax(auto, 20px) minmax(auto, 440px) minmax(auto, 20px);
+        grid-template-areas:
+            ". intro__teaser .";
+        background-color: rgba(0, 0, 0, 0.25);
     }
 
-    .intro__title,
-    .intro__text,
-    .intro__title::first-line {
-        color: #434242;
+.intro__teaser {
+    grid-area: intro__teaser;
+    align-self: center;
+    text-align: left;
+    padding-right: 0px;
     }
+ 
+
 }
 
 /* = ABOUT ================================================ */
