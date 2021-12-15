@@ -946,10 +946,10 @@ body {
 .certificates__content {
     grid-area: certificates__content;
     display: grid;
-    grid-template-columns: minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px);
+    grid-template-columns: minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px);
     grid-template-areas:
-        "certificates__title certificates__title certificates__title certificates__title certificates__title"
-        "certificates__diplom certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth   certificates__diplom__second";
+        "certificates__title certificates__title certificates__title certificates__title certificates__title certificates__title"
+        "certificates__diplom certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth  certificates__diplom__fifth certificates__diplom__second ";
 
     gap: 20px;
     padding: 20px;
@@ -1047,6 +1047,23 @@ img {
     transform: scale(1.5);
 }
 
+.certificates__diplom__fifth {
+    grid-area: certificates__diplom__fifth;
+}
+
+.certificates__diplom__fifth img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__fifth:hover img {
+    transform: scale(1.5);
+}
+
+
 @media screen and (max-width: 768px) {
     .certificates {
         grid-area: certificates;
@@ -1067,7 +1084,8 @@ img {
             "certificates__diplom__first"
             "certificates__diplom__fourth"
             "certificates__diplom"
-            "certificates__diplom__second";
+            "certificates__diplom__second"
+            "certificates__diplom__fifth";
         row-gap: 20px;
     }
 }
