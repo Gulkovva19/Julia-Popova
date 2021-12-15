@@ -41,6 +41,7 @@ body {
     letter-spacing: 0.02em;
     text-align: left;
     text-transform: uppercase;
+    color: #7a6b55c9;
 }
 
 /*H3*/
@@ -519,19 +520,21 @@ body {
         grid-template-areas:
             ". . ."
             "intro__content intro__content intro__content";
-       /* background: url("/assets/images/block_intro/intro-example1-small.jpeg") 50%/cover no-repeat;*/
+        /* background: url("/assets/images/block_intro/intro-example1-small.jpeg") 50%/cover no-repeat;*/
     }
 
     .intro__content {
         grid-area: intro__content;
         grid-template-columns: 1fr;
         padding: 10px;
-        outline:1px solid #b19b7bc9;
+        outline: 1px solid #b19b7bc9;
         outline-offset: -10px;
         background-color: #FFFFFF;
     }
 
-    .intro__title, .intro__text, .intro__title::first-line {
+    .intro__title,
+    .intro__text,
+    .intro__title::first-line {
         color: #434242;
     }
 }
@@ -576,7 +579,7 @@ body {
 .about-photo {
     box-sizing: border-box;
     max-width: 100%;
-    border: 1px solid #282322;
+    border: 1px solid #b19b7bc9;
     padding: 3%;
 }
 
@@ -1017,8 +1020,8 @@ body {
     grid-template-columns: minmax(auto, 90%) minmax(auto, 10%);
     grid-template-areas:
         "connection__container social__container";
-    background-color: #fae8c757;
-    border: 1px solid #282322;
+    background-color: #fae8c72a;
+    border: 1px solid #b19b7bc9;
 }
 
 .connection__container {
@@ -1041,6 +1044,7 @@ body {
     box-sizing: border-box;
     padding: 13px 50px 13px 13px;
     width: 50%;
+    border: 1px solid #b19b7bc9;
 }
 
 .contacts__button {
@@ -1056,6 +1060,31 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.icon_phone:hover {
+    stroke: white;
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
+.icon_mail:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    stroke: white;
+
+}
+
+.icon_whatsapp:hover {
+    stroke: white;
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
+.icon_insta:hover {
+    stroke: white;
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 @media screen and (max-width: 1024px) {
