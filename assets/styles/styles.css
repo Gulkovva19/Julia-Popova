@@ -41,6 +41,7 @@ body {
     letter-spacing: 0.02em;
     text-align: left;
     text-transform: uppercase;
+    color: #7a6b55c9;
 }
 
 /*H3*/
@@ -113,7 +114,6 @@ body {
 
 .header::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -160,6 +160,11 @@ body {
     margin-right: 50px;
 }
 
+.menu__list li:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
 .header__social {
     grid-area: header__social;
     display: flex;
@@ -171,6 +176,11 @@ body {
     display: block;
     object-fit: cover;
     padding-left: 20px;
+}
+
+.social__img:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 /* - Типографика ------------------------------------------- */
@@ -427,7 +437,7 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". intro__content .";
-    background: url("/assets/images/block_intro/intro-example1.jpeg") 50%/cover no-repeat;
+    background: url("/assets/images/block_intro/intro-example5.jpg") 50%/cover no-repeat;
     min-height: 100vh;
     margin-top: -80px;
     outline: 1px solid #FFFFFF;
@@ -493,16 +503,39 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .intro {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 747px) minmax(1rem, 1fr);
     }
+
 }
 
 @media screen and (max-width: 500px) {
     .intro {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
+        grid-area: intro;
+        display: grid;
         outline: none;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 480px) minmax(1rem, 1fr);
+        grid-template-rows: 800px 500px;
+        grid-template-areas:
+            ". . ."
+            "intro__content intro__content intro__content";
+        /* background: url("/assets/images/block_intro/intro-example1-small.jpeg") 50%/cover no-repeat;*/
+    }
+
+    .intro__content {
+        grid-area: intro__content;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        outline: 1px solid #b19b7bc9;
+        outline-offset: -10px;
+        background-color: #FFFFFF;
+    }
+
+    .intro__title,
+    .intro__text,
+    .intro__title::first-line {
+        color: #434242;
     }
 }
 
@@ -546,7 +579,7 @@ body {
 .about-photo {
     box-sizing: border-box;
     max-width: 100%;
-    border: 1px solid #282322;
+    border: 1px solid #b19b7bc9;
     padding: 3%;
 }
 
@@ -902,23 +935,22 @@ body {
 
 /* = CERTIFICATES ================================================ */
 
-
 .certificates {
     grid-area: certificates;
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
-    grid-template-areas: ". certificates__content .";
+    grid-template-areas:
+        ". certificates__content .";
 }
 
 .certificates__content {
     grid-area: certificates__content;
     display: grid;
-    grid-template-columns: minmax(auto, 500px) minmax(auto-fit) minmax(auto, 500px);
+    grid-template-columns: minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px) minmax(auto, 500px);
     grid-template-areas:
-        "certificates__title certificates__title certificates__title"
-        "certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth"
-        "certificates__diplom  . certificates__diplom__second";
-    /*     background-color: #EAD1D0; */
+        "certificates__title certificates__title certificates__title certificates__title certificates__title"
+        "certificates__diplom certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth   certificates__diplom__second";
+
     gap: 20px;
     padding: 20px;
     justify-content: space-around;
@@ -940,6 +972,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom:hover img {
+    transform: scale(2.0);
 }
 
 .certificates__diplom__first {
@@ -951,12 +988,19 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__first:hover img {
+    transform: scale(1.5);
+}
+
+img {
+    transition: transform 0.25s;
 }
 
 .certificates__diplom__second {
     grid-area: certificates__diplom__second;
-
-
 }
 
 .certificates__diplom__second img {
@@ -964,6 +1008,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__second:hover img {
+    transform: scale(2.0);
 }
 
 .certificates__diplom__third {
@@ -975,6 +1024,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__third:hover img {
+    transform: scale(1.5);
 }
 
 .certificates__diplom__fourth {
@@ -986,9 +1040,12 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
 }
 
-
+.certificates__diplom__fourth:hover img {
+    transform: scale(1.5);
+}
 
 @media screen and (max-width: 768px) {
     .certificates {
@@ -1128,8 +1185,8 @@ body {
     grid-template-columns: minmax(auto, 90%) minmax(auto, 10%);
     grid-template-areas:
         "connection__container social__container";
-    background-color: #fae8c757;
-    border: 1px solid #282322;
+    background-color: #fae8c72a;
+    border: 1px solid #b19b7bc9;
 }
 
 .connection__container {
@@ -1152,6 +1209,7 @@ body {
     box-sizing: border-box;
     padding: 13px 50px 13px 13px;
     width: 50%;
+    border: 1px solid #b19b7bc9;
 }
 
 .contacts__button {
@@ -1167,6 +1225,31 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.icon_phone:hover {
+    stroke: white;
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
+.icon_mail:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    stroke: white;
+
+}
+
+.icon_whatsapp:hover {
+    stroke: white;
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
+.icon_insta:hover {
+    stroke: white;
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 @media screen and (max-width: 1024px) {
@@ -1195,10 +1278,28 @@ body {
     grid-area: footer__content;
     display: flex;
     justify-content: space-between;
+    color: white;
+}
+
+.footer__title {
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .footer__anchor {
     align-self: center;
+}
+
+.footer_link {
+    color: white;
+    text-decoration: none;
 }
 
 .footer__copyright {
