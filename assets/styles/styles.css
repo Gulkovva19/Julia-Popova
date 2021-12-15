@@ -602,12 +602,11 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". services__content .";
-    background-color: #fae8c757;
+    /* background-color: #fae8c757; */
 }
 
 .services__content {
     grid-area: services__content;
-
     display: flex;
     flex-direction: column;
 }
@@ -660,6 +659,18 @@ body {
     .services {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
     }
+
+    .services__block {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .services__column {
+        justify-content: center;
+        margin-left: 50px;
+    }
+
 }
 
 /* = GALLERY ================================================ */
@@ -1160,6 +1171,7 @@ img {
     color: white;
     text-decoration: none;
 }
+
 
 .footer__copyright {
     align-self: center;
