@@ -689,7 +689,7 @@ body {
     }
 
     .about__content {
-        grid-template-columns: minmax(auto, 1fr) minmax(auto, 33%) minmax(auto, 67%) minmax(auto, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 33%) minmax(auto, 67%) minmax(1rem, 1fr);
         /* grid-template-columns: minmax(auto, 50px) minmax(auto, 247px) minmax(auto, 501px) minmax(auto, 50px); */
     }
 }
@@ -704,10 +704,18 @@ body {
     }
 
     .about__content {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748) minmax(1rem, 1fr);
-        /* grid-template-columns: minmax(auto, 50px) minmax(auto, 247px) minmax(auto, 501px) minmax(auto, 50px); */
-        grid-template-areas:
-            ". about-text__container .";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 90%;
+    }
+
+    .about-text__container {
+        grid-area: about-text__container;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
     }
 }
 
