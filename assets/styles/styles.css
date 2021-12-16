@@ -27,7 +27,6 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #434242;
-    /* background-color: #fae8c757; */
 }
 
 /*H2*/
@@ -170,13 +169,12 @@ body {
     grid-area: header__social;
     display: flex;
     z-index: 3;
+    padding-right: 70px;
 }
 
-.social__img {
-    max-width: 30px;
+.icon {
     display: block;
     object-fit: cover;
-    padding-left: 20px;
 }
 
 .social__img:hover {
@@ -342,6 +340,7 @@ body {
 
     .header__social {
         justify-self: right;
+        padding-right: 0px;
     }
 
     .header__social.active {
@@ -366,6 +365,10 @@ body {
     .header__social {
         grid-area: header__social;
         justify-self: right;
+    }
+
+    .social__img {
+        padding-left: 20px;
     }
 
     .header__logo {
@@ -406,6 +409,10 @@ body {
         grid-template-areas: "header__burger header__logo header__social";
     }
 
+    .header__content {
+        padding-top: 15px;
+    }
+
     .header__social {
         grid-area: header__social;
         justify-self: right;
@@ -422,10 +429,6 @@ body {
 
     .header__burger {
         margin-right: 20px;
-    }
-
-    .header__content {
-        padding-top: 15px;
     }
 }
 
@@ -565,6 +568,30 @@ body {
     color: #FFFFFF;
 }
 
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 1024px) and (orientation:portrait) {
+    .intro {
+        grid-area: intro;
+        display: grid;
+        grid-template-areas:
+            "intro__content intro__content intro__content";
+    }
+
+    .intro__content {
+        grid-area: intro__content;
+        display: grid;
+        grid-template-columns: minmax(auto, 100px) minmax(auto, 804px) minmax(auto, 100px);
+        grid-template-areas:
+            ". intro__teaser .";
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .intro__teaser {
+        padding-top: 60%;
+        padding-bottom: 50px;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .intro {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
@@ -586,7 +613,11 @@ body {
         grid-template-columns: minmax(auto, 20px) minmax(auto, 728px) minmax(auto, 20px);
         grid-template-areas:
             ". intro__teaser .";
+    }
 
+    .intro__teaser {
+        padding-top: 60%;
+        padding-bottom: 50px;
     }
 
     .intro__title {
@@ -608,7 +639,6 @@ body {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 480px) minmax(1rem, 1fr);
         grid-template-areas:
             "intro__content intro__content intro__content";
-
     }
 
     .intro__content {
@@ -626,8 +656,6 @@ body {
         text-align: left;
         padding-right: 0px;
     }
-
-
 }
 
 /* = ABOUT ================================================ */
