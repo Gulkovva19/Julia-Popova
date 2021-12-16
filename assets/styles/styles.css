@@ -826,11 +826,11 @@ body {
     right: 10px;
     width: calc(50% - 20px);
     /* top: 50%; */
-    top: 35%;
+    top: 25%;
     /* transform: translateY(-50%); */
     transform: translateY(-55%);
     /* height: 90%; */
-    height: 60%;
+    height: 40%;
     opacity: 0;
     transition: all .3s ease;
 }
@@ -857,29 +857,28 @@ body {
     width: 50%;
 }
 
-.projects .projects__content .projects__result {
+.projects__content .projects__result {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
 
-.projects .projects__content .subtitle {
+.projects__content .subtitle {
     text-align: center;
 }
 
-.projects .projects__content .projects__result .result__content {
+.projects__content .projects__result .result__content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-
+    justify-content: space-evenly;
 }
 
-.projects .projects__content .result__content .result__link {
+.projects__content .result__content .result__link {
     margin-top: 15px;
-    max-height: 120px;
+    max-height: 150px;
 }
 
-.projects .projects__content .result__content .result__link .result__img {
+.projects__content .result__content .result__link .result__img {
     width: 100%;
     height: 100%;
     display: block;
@@ -888,11 +887,52 @@ body {
     opacity: 0.7;
 }
 
-.projects .projects__content .result__content .result__link .result__img:hover {
-    transform: scale(1.5, 1.5);
+.projects__content .result__content .result__link .result__img:hover {
+    transform: scale(1.2, 1.4);
     /* filter: alpha (Opacity=100); */
     opacity: 1;
 }
+
+.projects__content .info {
+    /* background: #f0ddbba9; */
+    margin-top: 50px;
+    /* max-width: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: row; */
+}
+
+.projects__content .info .info__wrapper {
+    background: #cebab8;
+    margin: 0 auto;
+    max-width: 850px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.projects__content .info .info__item {
+    max-width: 230px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects__content .info .info__item span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #434242;
+}
+
 
 @media screen and (max-width: 1024px) {
     .projects {
