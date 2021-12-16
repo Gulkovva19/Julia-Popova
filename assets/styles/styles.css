@@ -41,7 +41,7 @@ body {
     letter-spacing: 0.02em;
     text-align: left;
     text-transform: uppercase;
-    color: #7a6b55c9;
+    color: #8b7e7c;
 }
 
 /*H3*/
@@ -64,14 +64,15 @@ body {
     line-height: 130%;
     letter-spacing: 0em;
     text-align: left;
-    color: #282322;
+    color: #726564;
 }
 
 /* - Оформление: ссылки, кнопки ---------------------------- */
 .button {
     display: inline-flex;
     align-items: center;
-    background: #b19b7bc9;
+    background: #baa8a6;
+
 }
 
 .button_transparent {
@@ -95,11 +96,11 @@ body {
 .button:hover {
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
-    background: linear-gradient(#f0ddbba9, #806f56);
+    background: linear-gradient(#dac5c3, #837776);
 }
 
 .button:active {
-    background: linear-gradient(#817157, #948164) rgb(76, 77, 82);
+    background: linear-gradient(#9e908e, #9e908e) rgb(76, 77, 82);
 }
 
 /* = HEADER ================================================ */
@@ -449,7 +450,7 @@ body {
 .feedback,
 .faq,
 .contacts {
-    margin-bottom: 180px;
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -463,7 +464,7 @@ body {
     .feedback,
     .faq,
     .contacts {
-        margin-bottom: 120px;
+        margin-bottom: 80px;
     }
 }
 
@@ -585,7 +586,7 @@ body {
     }
 
     .intro__title_alternative {
-        display:flex;
+        display: flex;
         color: #FFFFFF;
     }
 }
@@ -597,7 +598,7 @@ body {
         outline: none;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 480px) minmax(1rem, 1fr);
         grid-template-areas:
-        "intro__content intro__content intro__content";
+            "intro__content intro__content intro__content";
 
     }
 
@@ -610,13 +611,13 @@ body {
         background-color: rgba(0, 0, 0, 0.25);
     }
 
-.intro__teaser {
-    grid-area: intro__teaser;
-    align-self: center;
-    text-align: left;
-    padding-right: 0px;
+    .intro__teaser {
+        grid-area: intro__teaser;
+        align-self: center;
+        text-align: left;
+        padding-right: 0px;
     }
- 
+
 
 }
 
@@ -690,6 +691,7 @@ body {
     grid-area: services__content;
     display: flex;
     flex-direction: column;
+    background-color: #baa8a61f;
 }
 
 
@@ -1284,7 +1286,7 @@ img {
 .contacts {
     grid-area: contacts;
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1100px) minmax(1rem, 1fr);
     grid-template-areas:
         ". contacts__content .";
 }
@@ -1292,21 +1294,24 @@ img {
 .contacts__content {
     grid-area: contacts__content;
     display: grid;
-    grid-template-columns: minmax(auto, 90%) minmax(auto, 10%);
+    grid-template-columns: minmax(auto, 60%) minmax(auto, 30%) minmax(auto, 10%);
     grid-template-areas:
-        "connection__container social__container";
-    background-color: #fae8c72a;
-    border: 1px solid #b19b7bc9;
+        "connection__container image__container social__container";
+    background-color: #baada63f;
+    border: 1px solid #857776;
 }
 
 .connection__container {
     grid-area: connection__container;
     box-sizing: border-box;
-    padding: 2% 5%;
+    padding: 2% 7%;
 }
 
+
+
 .contacts__text {
-    width: 50%;
+    width: 80%;
+    padding-top: 3%;
 }
 
 .contact-form__inputs {
@@ -1318,14 +1323,29 @@ img {
 .contact-input {
     box-sizing: border-box;
     padding: 13px 50px 13px 13px;
-    width: 50%;
+    width: 80%;
     border: 1px solid #b19b7bc9;
 }
 
 .contacts__button {
-    width: 35%;
+    width: 50%;
     display: flex;
     justify-content: center;
+    margin-top: 2%;
+}
+
+.image__container {
+    grid-area: image__container;
+    align-content: center;
+    align-self: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.contact_image {
+    max-width: 100%;
+    max-height: 70%;
+    align-self: center;
 }
 
 .social__container {
@@ -1338,26 +1358,47 @@ img {
 }
 
 .icon_phone:hover {
-    stroke: white;
+    stroke: #857776;
     -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
+}
+
+.icon_mail {
+    stroke: #af9c9b;
+}
+
+.icon_phone {
+    stroke: #af9c9b;
+}
+
+.icon_insta {
+    stroke: #af9c9b;
+}
+
+.icon_whatsapp {
+    stroke: #af9c9b;
 }
 
 .icon_mail:hover {
     -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
-    stroke: white;
+    stroke: #f0d9d9;
+}
 
+.icon_phone:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    stroke: #f0d9d9;
 }
 
 .icon_whatsapp:hover {
-    stroke: white;
+    stroke: #f0d9d9;
     -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
 }
 
 .icon_insta:hover {
-    stroke: white;
+    stroke: #f0d9d9;
     -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
 }
@@ -1381,7 +1422,7 @@ img {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". footer__content .";
-    background-color: #b19b7bc9;
+    background-color: #baa8a6;
 }
 
 .footer__content {
