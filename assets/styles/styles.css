@@ -670,10 +670,16 @@ body {
 .about__content {
     grid-area: about__content;
     display: grid;
-    grid-template-columns: minmax(auto, 67%) minmax(auto, 33%);
+    grid-template-columns: minmax(auto, 100px) minmax(auto, 330px) minmax(auto, 670px) minmax(auto, 100px);
     grid-template-areas:
-        "about-text__container about-photo__container";
+        ". about-photo__container about-text__container .";
     /* background-color: #fae8c757; */
+}
+
+.about__title {
+    display: flex;
+    justify-content: center;
+
 }
 
 .about-text__container {
@@ -681,7 +687,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.about-text {
+    display: flex;
+    align-self: center;
+}
+
+.icon-about {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    margin-right: 20px;
 }
 
 /* .about__button {
@@ -706,11 +724,35 @@ body {
     .about {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
     }
+
+    .about__content {
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 33%) minmax(auto, 67%) minmax(1rem, 1fr);
+        /* grid-template-columns: minmax(auto, 50px) minmax(auto, 247px) minmax(auto, 501px) minmax(auto, 50px); */
+    }
 }
 
 @media screen and (max-width: 768px) {
     .about {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
+    }
+
+    .about-photo__container {
+        display: none;
+    }
+
+    .about__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 90%;
+    }
+
+    .about-text__container {
+        grid-area: about-text__container;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
     }
 }
 
