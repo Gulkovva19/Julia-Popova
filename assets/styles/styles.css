@@ -135,7 +135,7 @@ body {
 }
 
 .header__logo {
-    display:none
+    display: none
 }
 
 .header__burger {
@@ -368,7 +368,7 @@ body {
         grid-area: header__logo;
         align-self: center;
         z-index: 3;
-        }
+    }
 
 
     .header__burger {
@@ -996,7 +996,8 @@ body {
 }
 
 .projects__content .info .info__wrapper {
-    background: #cebab8;
+    background-color: #baada63f;
+    border: 1px solid #857776;
     margin: 0 auto;
     max-width: 850px;
     height: 100%;
@@ -1012,6 +1013,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #6d6160;
 }
 
 .projects__content .info .info__item span {
@@ -1023,7 +1025,7 @@ body {
     line-height: 130%;
     letter-spacing: 0em;
     text-align: left;
-    color: #434242;
+    color: #665858;
 }
 
 
