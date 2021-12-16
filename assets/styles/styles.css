@@ -633,9 +633,9 @@ body {
 .about__content {
     grid-area: about__content;
     display: grid;
-    grid-template-columns: minmax(auto, 67%) minmax(auto, 33%);
+    grid-template-columns: minmax(auto, 100px) minmax(auto, 330px) minmax(auto, 670px) minmax(auto, 100px);
     grid-template-areas:
-        "about-text__container about-photo__container";
+        ". about-photo__container about-text__container .";
     /* background-color: #fae8c757; */
 }
 
@@ -644,7 +644,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.about-text {
+    display: flex;
+    align-self: center;
+}
+
+.icon-about {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    margin-right: 20px;
 }
 
 /* .about__button {
