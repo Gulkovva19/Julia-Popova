@@ -51,6 +51,8 @@ body {
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
+    color: #857776;
+    text-transform: uppercase;
 }
 
 /*просто текст во всех параграфах*/
@@ -62,7 +64,7 @@ body {
     line-height: 130%;
     letter-spacing: 0em;
     text-align: left;
-    color: #726564;
+    color: #7c6c6b;
 }
 
 /* - Оформление: ссылки, кнопки ---------------------------- */
@@ -135,7 +137,7 @@ body {
 }
 
 .header__logo {
-    display:none
+    display: none
 }
 
 .header__burger {
@@ -368,7 +370,7 @@ body {
         grid-area: header__logo;
         align-self: center;
         z-index: 3;
-        }
+    }
 
 
     .header__burger {
@@ -996,7 +998,8 @@ body {
 }
 
 .projects__content .info .info__wrapper {
-    background: #cebab8;
+    background-color: #baa8a61f;
+    border: 1px solid #857776;
     margin: 0 auto;
     max-width: 850px;
     height: 100%;
@@ -1008,7 +1011,7 @@ body {
 
 .projects__content .info .info__item {
     max-width: 230px;
-    height: 130px;
+    height: 13git0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1023,7 +1026,7 @@ body {
     line-height: 130%;
     letter-spacing: 0em;
     text-align: left;
-    color: #434242;
+    color: #857776;
 }
 
 
