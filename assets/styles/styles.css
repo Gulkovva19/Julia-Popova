@@ -1080,13 +1080,15 @@ img {
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
         grid-template-areas:
             "certificates__title"
+            "certificates__diplom"
             "certificates__diplom__third"
             "certificates__diplom__first"
             "certificates__diplom__fourth"
-            "certificates__diplom"
-            "certificates__diplom__second"
-            "certificates__diplom__fifth";
-        row-gap: 20px;
+            "certificates__diplom__fifth"
+            "certificates__diplom__second";
+        row-gap: 10px;
+        width: 70%;
+        height: auto;
     }
 }
 
