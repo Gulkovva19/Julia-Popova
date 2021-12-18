@@ -118,7 +118,6 @@ body {
 
 .header::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -590,7 +589,7 @@ body {
 
     .intro__teaser {
         padding-top: 60%;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }
 
