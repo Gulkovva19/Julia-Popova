@@ -1144,12 +1144,12 @@ body {
 
 /* = CERTIFICATES ================================================ */
 
-
 .certificates {
     grid-area: certificates;
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
-    grid-template-areas: ". certificates__content .";
+    grid-template-areas:
+        ". certificates__content .";
 }
 
 .certificates__content {
@@ -1159,6 +1159,7 @@ body {
     grid-template-areas:
         "certificates__title certificates__title certificates__title certificates__title certificates__title certificates__title"
         "certificates__diplom certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth  certificates__diplom__fifth certificates__diplom__second ";
+
     gap: 20px;
     padding: 20px;
     justify-content: space-around;
@@ -1180,6 +1181,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom:hover img {
+    transform: scale(2.0);
 }
 
 .certificates__diplom__first {
@@ -1191,12 +1197,19 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__first:hover img {
+    transform: scale(1.5);
+}
+
+img {
+    transition: transform 0.25s;
 }
 
 .certificates__diplom__second {
     grid-area: certificates__diplom__second;
-
-
 }
 
 .certificates__diplom__second img {
@@ -1204,6 +1217,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__second:hover img {
+    transform: scale(2.0);
 }
 
 .certificates__diplom__third {
@@ -1215,6 +1233,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__third:hover img {
+    transform: scale(1.5);
 }
 
 .certificates__diplom__fourth {
@@ -1226,9 +1249,12 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
 }
 
-
+.certificates__diplom__fourth:hover img {
+    transform: scale(1.5);
+}
 
 .certificates__diplom__fifth {
     grid-area: certificates__diplom__fifth;
@@ -1254,6 +1280,7 @@ body {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
         grid-template-areas:
             ". certificates__content .";
+        justify-items: center;
     }
 
 
@@ -1263,13 +1290,15 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
         grid-template-areas:
             "certificates__title"
+            "certificates__diplom"
             "certificates__diplom__third"
             "certificates__diplom__first"
             "certificates__diplom__fourth"
-            "certificates__diplom"
-            "certificates__diplom__second"
-            "certificates__diplom__fifth";
-        row-gap: 20px;
+            "certificates__diplom__fifth"
+            "certificates__diplom__second";
+        row-gap: 10px;
+        width: 70%;
+        height: auto;
     }
 }
 
