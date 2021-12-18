@@ -118,7 +118,6 @@ body {
 
 .header::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -131,7 +130,7 @@ body {
     display: grid;
     min-height: 80px;
     align-items: center;
-    grid-template-columns: minmax(auto, 170px) minmax(auto, 880px) minmax(auto, 150px);
+    grid-template-columns: minmax(auto, 170px) minmax(auto, 860px) minmax(auto, 170px);
     grid-template-areas:
         "header__menu header__menu header__social";
 }
@@ -163,6 +162,11 @@ body {
     margin-right: 50px;
 }
 
+.menu__list li:hover {
+    -webkit-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+}
+
 .header__social {
     grid-area: header__social;
     display: flex;
@@ -170,9 +174,9 @@ body {
     padding-right: 70px;
 }
 
-.icon {
-    display: block;
-    object-fit: cover;
+.social__img:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 /* - Типографика ------------------------------------------- */
@@ -241,6 +245,7 @@ body {
         height: 20px;
         z-index: 3;
         justify-self: left;
+        cursor: pointer;
     }
 
     .header__burger::before,
@@ -339,6 +344,11 @@ body {
     .header__social.active {
         display: none;
     }
+
+    .social__img svg {
+        padding-right: 0px;
+        padding-left: 20px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -355,13 +365,9 @@ body {
         padding-top: 15px;
     }
 
-    .header__social {
-        grid-area: header__social;
-        justify-self: right;
-    }
-
-    .social__img {
-        padding-left: 20px;
+    .header__burger {
+        grid-area: header__burger;
+        justify-self: left;
     }
 
     .header__logo {
@@ -370,16 +376,6 @@ body {
         grid-area: header__logo;
         align-self: center;
         z-index: 3;
-    }
-
-
-    .header__burger {
-        grid-area: header__burger;
-        justify-self: left;
-    }
-
-    .social__img {
-        max-width: 40px;
     }
 
     .header__logo a {
@@ -392,6 +388,18 @@ body {
         text-align: left;
         text-decoration: none;
         color: #FFFFFF;
+    }
+
+    .header__social {
+        grid-area: header__social;
+        justify-self: right;
+    }
+
+    .social__img svg {
+        padding-right: 0px;
+        padding-left: 15px;
+        max-width: 40px;
+        margin-right: 0px;
     }
 }
 
@@ -581,7 +589,7 @@ body {
 
     .intro__teaser {
         padding-top: 60%;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }
 
@@ -788,7 +796,7 @@ body {
     width: 40px;
     height: 40px;
     align-self: center;
-    margin-right: 20px;
+    padding-right: 20px;
 }
 
 .services__item {
@@ -1229,12 +1237,12 @@ body {
 
 /* = CERTIFICATES ================================================ */
 
-
 .certificates {
     grid-area: certificates;
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
-    grid-template-areas: ". certificates__content .";
+    grid-template-areas:
+        ". certificates__content .";
 }
 
 .certificates__content {
@@ -1244,6 +1252,7 @@ body {
     grid-template-areas:
         "certificates__title certificates__title certificates__title certificates__title certificates__title certificates__title"
         "certificates__diplom certificates__diplom__third certificates__diplom__first  certificates__diplom__fourth  certificates__diplom__fifth certificates__diplom__second ";
+
     gap: 20px;
     padding: 20px;
     justify-content: space-around;
@@ -1265,6 +1274,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom:hover img {
+    transform: scale(2.0);
 }
 
 .certificates__diplom__first {
@@ -1276,12 +1290,19 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__first:hover img {
+    transform: scale(1.5);
+}
+
+img {
+    transition: transform 0.25s;
 }
 
 .certificates__diplom__second {
     grid-area: certificates__diplom__second;
-
-
 }
 
 .certificates__diplom__second img {
@@ -1289,6 +1310,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__second:hover img {
+    transform: scale(2.0);
 }
 
 .certificates__diplom__third {
@@ -1300,6 +1326,11 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
+}
+
+.certificates__diplom__third:hover img {
+    transform: scale(1.5);
 }
 
 .certificates__diplom__fourth {
@@ -1311,9 +1342,12 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    overflow: visible;
 }
 
-
+.certificates__diplom__fourth:hover img {
+    transform: scale(1.5);
+}
 
 .certificates__diplom__fifth {
     grid-area: certificates__diplom__fifth;
@@ -1339,6 +1373,7 @@ body {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
         grid-template-areas:
             ". certificates__content .";
+        justify-items: center;
     }
 
 
@@ -1348,13 +1383,15 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
         grid-template-areas:
             "certificates__title"
+            "certificates__diplom"
             "certificates__diplom__third"
             "certificates__diplom__first"
             "certificates__diplom__fourth"
-            "certificates__diplom"
-            "certificates__diplom__second"
-            "certificates__diplom__fifth";
-        row-gap: 20px;
+            "certificates__diplom__fifth"
+            "certificates__diplom__second";
+        row-gap: 10px;
+        width: 70%;
+        height: auto;
     }
 }
 
