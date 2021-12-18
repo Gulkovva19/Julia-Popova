@@ -665,13 +665,11 @@ body {
     grid-template-columns: minmax(auto, 100px) minmax(auto, 330px) minmax(auto, 670px) minmax(auto, 100px);
     grid-template-areas:
         ". about-photo__container about-text__container .";
-    /* background-color: #fae8c757; */
 }
 
 .about__title {
     display: flex;
     justify-content: center;
-
 }
 
 .about-text__container {
@@ -682,7 +680,7 @@ body {
     padding-left: 5%;
 }
 
-.about-text {
+.about__text {
     display: flex;
     align-self: center;
 }
@@ -693,10 +691,6 @@ body {
     align-self: center;
     margin-right: 20px;
 }
-
-/* .about__button {
-    width: 30%;
-} */
 
 .about-photo__container {
     grid-area: about-photo__container;
@@ -719,7 +713,6 @@ body {
 
     .about__content {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 33%) minmax(auto, 67%) minmax(1rem, 1fr);
-        /* grid-template-columns: minmax(auto, 50px) minmax(auto, 247px) minmax(auto, 501px) minmax(auto, 50px); */
     }
 }
 
