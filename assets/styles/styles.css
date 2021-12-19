@@ -536,7 +536,7 @@ body {
 
 /* - Типографика ------------------------------------------- */
 .intro__title::first-line {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Comfortaa', cursive;
     font-size: 42px;
     font-style: normal;
     font-weight: 400;
@@ -1382,7 +1382,7 @@ body {
 .contacts {
     grid-area: contacts;
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1100px) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1000px) minmax(1rem, 1fr);
     grid-template-areas:
         ". contacts__content .";
 }
@@ -1424,7 +1424,7 @@ body {
 }
 
 .contacts__button {
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
     margin-top: 2%;
@@ -1530,7 +1530,7 @@ body {
 }
 
 .footer__title {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Comfortaa', cursive;
     font-size: 42px;
     font-style: normal;
     font-weight: 400;
