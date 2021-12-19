@@ -378,6 +378,16 @@ body {
         z-index: 3;
     }
 
+
+    .header__burger {
+        grid-area: header__burger;
+        justify-self: left;
+    }
+
+    .social__img {
+        max-width: 40px;
+    }
+
     .header__logo a {
         font-family: 'Pacifico', cursive;
         font-size: 32px;
@@ -544,7 +554,7 @@ body {
 
 /* - Типографика ------------------------------------------- */
 .intro__title::first-line {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Bellota Text', cursive;
     font-size: 42px;
     font-style: normal;
     font-weight: 400;
@@ -1057,6 +1067,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #6d6160;
 }
 
 .projects__content .info .info__item span {
@@ -1490,7 +1501,7 @@ img {
 .contacts {
     grid-area: contacts;
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1100px) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1000px) minmax(1rem, 1fr);
     grid-template-areas:
         ". contacts__content .";
 }
@@ -1498,7 +1509,7 @@ img {
 .contacts__content {
     grid-area: contacts__content;
     display: grid;
-    grid-template-columns: minmax(auto, 60%) minmax(auto, 30%) minmax(auto, 10%);
+    grid-template-columns: minmax(auto, 50%) minmax(auto, 40%) minmax(auto, 10%);
     grid-template-areas:
         "connection__container image__container social__container";
     background-color: #baada63f;
@@ -1532,7 +1543,7 @@ img {
 }
 
 .contacts__button {
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
     margin-top: 2%;
@@ -1637,7 +1648,7 @@ img {
 }
 
 .footer__title {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Bellota Text', cursive;
     font-size: 42px;
     font-style: normal;
     font-weight: 400;
