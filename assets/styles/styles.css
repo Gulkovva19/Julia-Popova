@@ -104,7 +104,7 @@ body {
 
 /* = HEADER ================================================ */
 /* - Позиционирование -------------------------------------- */
-.header { /*версия 19.12 13:16*/
+.header { /*версия 19.12 14:22*/
     grid-area: header;
     display: grid;
     width: 100%;
@@ -118,7 +118,6 @@ body {
 
 .header::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -156,7 +155,13 @@ body {
     list-style-type: none;
     position: relative;
     padding-inline-start: 0px;
+    cursor: pointer; /*Версия  19/12 13:50*/
     z-index: 3;
+}
+
+.menu__list li:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 .menu__list li:not(:last-of-type) {
@@ -167,12 +172,19 @@ body {
     grid-area: header__social;
     display: flex;
     z-index: 3;
-    padding-right: 70px;
+    margin-right: 10px;
 }
 
-.icon {
+.social__img {
+    max-width: 30px;
     display: block;
     object-fit: cover;
+    padding-left: 20px;
+}
+
+.social__img:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 /* - Типографика ------------------------------------------- */
@@ -312,7 +324,7 @@ body {
 
     .menu__list {
         display: block;
-        padding-top: 110px;
+        padding-top: 150px;
     }
 
     .menu__list li {
@@ -383,8 +395,8 @@ body {
     }
 
     .header__logo a {
-        font-family: 'Pacifico', cursive;
-        font-size: 32px;
+        font-family: 'Comfortaa', cursive;
+        font-size: 28px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%;
@@ -513,7 +525,7 @@ body {
     align-self: center;
     text-align: left;
     padding-right: 300px;
-    padding-top: 30%;
+    padding-top: 25%;
     padding-bottom: 100px;
     justify-self: left;
 }
@@ -587,9 +599,15 @@ body {
 
 @media screen and (max-width: 1023px) {
     .intro {
+        display: grid;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
         outline: 1px solid #FFFFFF;
         outline-offset: -60px;
+    }
+
+    .intro__teaser {
+        grid-area: intro__teaser;
+        padding-bottom: 100px;
     }
 }
 
@@ -603,7 +621,7 @@ body {
     .intro__content {
         grid-area: intro__content;
         display: grid;
-        grid-template-columns: minmax(auto, 20px) minmax(auto, 728px) minmax(auto, 20px);
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
         grid-template-areas:
             ". intro__teaser .";
     }
@@ -636,7 +654,7 @@ body {
     .intro__content {
         grid-area: intro__content;
         display: grid;
-        grid-template-columns: minmax(auto, 20px) minmax(auto, 440px) minmax(auto, 20px);
+        grid-template-columns: minmax(auto, 60px) minmax(auto, 400px) minmax(auto, 20px);
         grid-template-areas:
             ". intro__teaser .";
         background-color: rgba(0, 0, 0, 0.2);
