@@ -708,7 +708,7 @@ body {
 .about-photo {
     box-sizing: border-box;
     max-width: 100%;
-    border: 1px solid #282322;
+    border: 1px solid #ac9492;
     padding: 3%;
 }
 
@@ -1011,7 +1011,7 @@ body {
 
 .projects__content .info .info__item {
     max-width: 230px;
-    height: 13git0px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
