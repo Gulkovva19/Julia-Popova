@@ -933,7 +933,7 @@ body {
     display: flex;
     flex-direction: row;
     background: #baada63f;
-    height: auto;
+    /* height: auto; */
 }
 
 .projects__content .projects__content_left .icon {
@@ -1050,7 +1050,7 @@ body {
     align-items: center;
 } */
 
-.projects__content .info .info__item {
+/* .projects__content .info .info__item {
     max-width: 230px;
     height: 13git0px;
     display: flex;
@@ -1068,7 +1068,7 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #857776;
-}
+} */
 
 
 @media screen and (max-width: 1024px) {
@@ -1124,7 +1124,7 @@ body {
         margin-bottom: 0;
         display: grid;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: unset;
         grid-template-areas:
             ". projects__content_mobile ."
             ". projects__result .";
@@ -1157,6 +1157,7 @@ body {
     .projects__content_mobile .projects__list_mobile .link_mobile {
         display: block;
         margin-top: 15px;
+        /* opacity: 0.9; - согласуй с девочками */
     }
 
     .projects__content_mobile .projects__list_mobile .link_mobile .project__logo {
