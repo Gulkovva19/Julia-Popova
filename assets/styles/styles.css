@@ -1136,7 +1136,7 @@ body {
         margin-bottom: 0;
         display: grid;
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: unset;
         grid-template-areas:
             ". projects__content_mobile ."
             ". projects__result .";
@@ -1628,6 +1628,7 @@ img {
     .contacts {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
     }
+
 }
 
 /* = FOOTER ================================================ */
