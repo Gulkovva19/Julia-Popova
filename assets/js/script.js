@@ -4,3 +4,11 @@ $(document).ready(function() {
         $('.body').toggleClass('lock');
     });
 });
+
+$(document).ready(function() {
+    $('.slider').slick({
+      arrows:true,
+      dots:true,
+      adaptiveHeight: true,
+    });
+  });
