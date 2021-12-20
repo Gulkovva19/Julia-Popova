@@ -1526,7 +1526,7 @@ img {
 .connection__container {
     grid-area: connection__container;
     box-sizing: border-box;
-    padding: 2% 7%;
+    padding: 10% 7%;
 }
 
 
@@ -1636,6 +1636,43 @@ img {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
     }
 
+    .contacts__content {
+        grid-area: contacts__content;
+        display: grid;
+        grid-template-columns: minmax(auto, 85%) minmax(auto, 10%);
+        grid-template-areas:
+            "connection__container social__container";
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .connection__container {
+        padding: 8% 3%;
+    }
+
+    .contacts__text {
+        width: 90%;
+    }
+
+    .contact-form__inputs {
+        padding-left: 10px;
+    }
+
+    .connection__container .contact-form__inputs .contacts__title {
+        margin: 0;
+    }
+
+    .contacts__button {
+        width: 90%;
+    }
+
+    .image__container {
+        display: none;
+    }
+
+    .social__container {
+        padding-left: 15px;
+    }
 }
 
 /* = FOOTER ================================================ */
