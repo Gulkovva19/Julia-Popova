@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> стоит указывать тот язык, который используется на сайте, в нашем случае ru-->
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -17,17 +18,17 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <title>Юлия Попова</title>
 
-    <style>
+    <!-- <style> 
 
 
-    </style>
+    </style> не нужные теги-->
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="header__content">
-                <div class="header__logo">
+                <div class="header__logo"> 
                     <a href="#">
                         Юлия Попова
                     </a>
@@ -43,7 +44,7 @@
                         <li><a href="#contacts" class="menu__link">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="header__social">
+                <div class="header__social"> <!-- не по БЭМ, нет блока social, а значит и элемента social__img не может быть, я бы сделала header__social-img двойное название, не критично ) -->
                     <a class="social__img" href="https://instagram.com/yulia_popova29?utm_medium=copy_link"
                         target="_blank">
                         <svg class="icon">
@@ -67,15 +68,15 @@
             <div class="intro">
                 <div class="intro__content">
                     <div class="intro__teaser">
-                        <h1 class="intro__title title">Юлия Попова<br> Фандрайзер</h1>
-                        <h2 class="intro__title_alternative title">Фандрайзер</h2>
+                        <h1 class="intro__title title">Юлия Попова<br> Фандрайзер</h1> <!--Отлично! блок подстраивается под изменения, если добавить еще предложение - все ок.  -->
+                        <h2 class="intro__title_alternative title">Фандрайзер</h2> 
                         <div class="intro__text text">
                             <p>У вас есть проект, который решает социальную проблему?</p>
                             <p>Занимаетесь любимым делом, которое приносит помощь обществу?</p>
                             <p>Я помогу вам найти на этот проект средства и не тратить свои.</p>
                             <p>Занимайтесь своим делом без выгорания!</p>
                         </div>
-                        <div class="intro__button button button_transparent">
+                        <div class="intro__button button button_transparent"> <!--эталонно! -->
                             <a href="#contacts">Обратная связь</a>
                         </div>
                     </div>
@@ -86,13 +87,13 @@
                 <div class="about__content">
 
                     <!-- Блок "Обо мне" (Алина) -->
-                    <div class="about-photo__container">
+                    <div class="about-photo__container"> <!--не по БЭМ, блок не может лежать в элементе ) Правильно будет сделать блок container или about__container-->
                         <img class="about-photo" src="/assets/images/about/about-photo.jpg" alt="Julia's photo">
                     </div>
-                    <div class="about-text__container">
+                    <div class="about-text__container"><!--то же самое ,что и выше )-->
                         <div class="about__title title">обо мне</div>
-                        <div class="about-item__container">
-                            <div class="about-text text">
+                        <div class="about-item__container"> <!--не по БЭМ, элемент about-item__container без блока как ножка от стола без стола, это не кретично, стили написаны правильно, но именно название не по БЭМ-->
+                            <div class="about-text text"><!--а вот здесь все отлично! -->
                                 <img src="/assets/images/about/about-icon-rhombus.png" alt="" class="icon-about">
                                 <p>Основатель сети Инклюзивных клубов "Забота" на малых территориях Архангельской
                                     области.
@@ -133,6 +134,7 @@
                         <!-- <div class="about__button button">
                             <a href="">Связаться со мной</a>
                         </div> -->
+                        <!--стоит удалить, если не нужен-->
                     </div>
                 </div>
             </div>
@@ -146,7 +148,7 @@
                         <div class="services__column">
                             <div class="services__item">
                                 <img class="icon" src="./assets/images/Tilda_Icons_16cf_handshake.svg" alt="icon">
-                                <p class="services__item__text text">Спикер на выступлении: <br />
+                                <p class="services__item__text text">Спикер на выступлении: <br /><!--не по БЭМ, двойной элмент? правильно так services__text Все остальное отлично-->
                                     - Социальное проектирование<br />
                                     - Фандрайзинг<br /> </p>
                             </div>
@@ -223,9 +225,10 @@
                         </div>
                     </div>
 
-                    <div class="projects__content_right">
+                    <!-- <div class="projects__content_right">
 
-                    </div>
+                    </div> -->
+                    <!-- похоже это лишний элемент, не нашла для чего он =)  -->
                 </div>
 
                 <!-- блок только для мобильной версии -->
@@ -258,12 +261,12 @@
                             <p class="info__item"><span>> 6 млн руб</span> привлечённых средств на помощь детям</p>
                         </div>
                     </div> -->
-
+<!-- лишние закомментированные блоки лучше удалить -->
 
                 <div class="projects__result">
                     <h3 class="subtitle" style="color: rgb(102, 92, 91);">Результаты участия в конкурсах</h3>
                     <p></p>
-                    <div class="result__content">
+                    <div class="result__content"><!--не по БЭМ, нет блока result, а элемент result__content есть, если назвать блок не projects__result, а result - все встанет на свои места-->
                         <a href="javascript:void(0)" class="result__link">
                             <img class="result__img" src="/assets/images/block_projects/result_1.png" alt="result" />
                         </a>
@@ -281,13 +284,16 @@
             </div>
 
 
-            <div class="certificates">
+            <div class="certificates"> <!--здорово встроен слайдер-->
                 <div class="certificates__content">
                     <h2 class="certificates__title title">Грамоты и благодарности</h2>
                     <div class="certificates__diplom diplom">
                         <img src="./assets/images/blagodarstvennoe.png" alt="blagodarstvennoe">
                     </div>
-                    <div class="certificates__diplom__first diplom">
+                    <div class="certificates__diplom__first diplom"> <!--не очень практика модифицировать цифрами __first)))  __ отделяется элемент, поэтому не по БЭМ, правильно будет certificates__diplom_first с одним подчеркиванием, а еще лучше будет оставить certificates__diplom, а необходимые (различающиеся у всех остальных элементов) стили задать через псевдокласс :nth-child, это позволит не дублировать стили. 
+                        
+                    Посмотрела подробнее css, эти стили необходимы для сетки. Проще бы было использовать flex в данном случае. а грид только как обертку. Тогда не понадобились бы дополнительные наименования. Но в целом ок - засчитывается. Даже с цифрами 
+                    то , что отдельно вынесены общие стили в diplom - правильное решение-->
                         <img src="./assets/images/blagodarnost.png" alt="blagodarnost">
                     </div>
                     <div class="certificates__diplom__second diplom">
@@ -303,7 +309,7 @@
                         <img src="./assets/images/diplomzabota.jpg" alt="diplom">
                     </div>
                 </div>
-                <div class="certificates__slider">
+                <div class="certificates__slider"> 
                     <h2 class="certificates__title title">Грамоты и благодарности</h2>
                     <div class="slider">
                         <div class="certificates__diplom diplom slider__item">
@@ -345,13 +351,16 @@
         <div class="faq__content">
             Блок "Вопросы/ответы" (если будем успевать и Заказчица одобрит идею)
         </div>
-    </div>-->
+    </div>--> 
+
+    <!--Если не обдобрила - надо этот блок удалить-->
 
             <div class="contacts" id="contacts">
                 <div class="contacts__content">
                     <div class="connection__container">
 
-                        <form class="contact-form__inputs" action="//" method="">
+                        <form class="contact-form__inputs"><!--не по БЭМ. Правильно будет contacts__form-inputs form-inputs - элемент блока contacts (не contact), все остальное по БЭМ-->
+                            <!--Валидатор ругается на method="" и action="//"-->
                             <h2 class="contacts__title title">КОНТАКТЫ</h2>
                             <p class="contacts__text text">Заполните форму, чтобы связаться со мной и обсудить
                                 Ваш
@@ -367,6 +376,7 @@
                         <input class="contact-input" type="tel" name="user_email" value="" placeholder="Ваш телефон *"
                             tabindex="2" required />
                     </div> -->
+                    <!--стоит удалить лишние комментарии, оставляем только те, которые помогу в будущем-->
                             <div class="contacts__button button">
                                 <a href="http://127.0.0.1:5500/form.html" target="_blank">Заполнить форму</a>
                             </div>
@@ -374,15 +384,17 @@
                     </div>
 
 
-                    <div class="image__container">
+                    <div class="image__container"><!--не по БЭМ, нет блока image. По БЭМ будет задать блок container, а image использовать как элемент-->
                         <img class="contact_image" src="/assets/images/contacts/Изображение из iOS.jpg" alt="photo">
+                        <!--плохая ссылка, так лучше не делать, лучше называть изображения английскими буквами и пробелы заменять _ image_ios.jpg стоит заменить название картинки и путь соответственно
+                        не по БЭМ нет блока contact, есть contacts-->
                     </div>
 
-                    <div class="social__container">
+                    <div class="social__container"> <!-- не по БЭМ нет блока social По БЭМ будет задать блок container, а social использовать как элемент-->
 
                         <div class="phone social-icons">
                             <a href="tel:89115994852" target="_blank">
-                                <?xml version="1.0" encoding="UTF-8"?>
+                                <!-- <?xml version="1.0" encoding="UTF-8"?> не нужный элемент, надо удалить.  -->
                                 <svg class="icon icon_phone">
                                     <use xlink:href="assets/images/contacts/icons.svg#phone2"></use>
                                 </svg>
@@ -405,7 +417,7 @@
                             </a>
                         </div>
 
-                        <div class="mail social-icons">
+                        <div class="mail social-icons"><!--здесь все по БЭМ, отлично! -->
                             <a href="mailto:Popofffa08@mail.ru" target="_blank">
                                 <svg class="icon icon_mail">
                                     <use xlink:href="assets/images/contacts/icons.svg#mail2"></use>
@@ -418,9 +430,9 @@
         </main>
 
         <footer class="footer">
-            <div class="footer__content color_white">
+            <div class="footer__content color_white"><!--Не по БЭМ color_white нет блока color, у которого элемент _white, можно сделат отдульным блоком color-white-->
                 <div class="footer__copyright">
-                    <p>©Copyright 2021</p>
+                    <p>©Copyright 2021</p><!--правильно использован значок копирайта, в современном подходе стараются избегать спецсимволов, и если есть возможность - вставлять символ -->
                 </div>
                 <div class="footer__title title">
                     <p>Юлия Попова</p>
@@ -437,3 +449,13 @@
 </body>
 
 </html>
+<!--если подводить итог, то уровень работы сильно вырос, вспомните пердыдущую. Вы хорошо потрудились! Есть небольшие огрехи по БЭМ, не страшные, никак не влияющие на вашу работу. Но лучше их исправить, тогда вы сможете брать блок целиком и переносить в другую работу. Очень важно создать свою базу со структурой и примерными стилями. Тогда скорость работы существенно увеличится, вам не придется заново изобретать похожие блоки, а достаточно будет просто перенести то, что есть и немного подправить стили. 
+
+Все замечания не критичные, т.к. сайт работает, работает хорошо
+Каждый блок адаптивен! 
+Работа не прошла валидацию =) все замечания я записала сюда
+
+Понравилось, что вы виртуозно используете грид, надеюсь, что флекс вы так же не боитесь ) 
+Если говорить про работу вооще, то вам удалось выстроить отношения с заказчицей, удалось придумать и воплотить дизайн, удалось сработать командой. Я уверена, что если вы будете делать такой сайт самостоятельно каждая, то вам будет проще. Вы получили ценный опыт работы профессиональной команды. Видно, что в сайт вложено много труда и души. И восхищаюсь вами, знаю, что многие работают, совмещать работу и учебу очень тяжело. При том, что это не ваша нынешняя работа, а то, что вы делаете на досуге - супер! 
+Верстку подобной страницы новчиком на фрилансе обычно оценивают примерно до 100 долларов. Т.е. уже сейчас вы можете брать подобные работы и смело просить за главную страницу 5-7 тысяч рублей. Но это как договоритесь ) Сделаете 3-4 работы и можно смело просить больше ) 
+-->
