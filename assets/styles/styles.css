@@ -105,7 +105,6 @@ body {
 /* = HEADER ================================================ */
 /* - Позиционирование -------------------------------------- */
 .header {
-    /*версия 20.12 17:55*/
     grid-area: header;
     display: grid;
     width: 100%;
@@ -176,13 +175,13 @@ body {
     margin: 0px;
 }
 
-.social__img {
+.social-img {
     max-width: 25px;
     display: block;
     padding-left: 25px;
 }
 
-.social__img:hover {
+.social-img:hover {
     -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
 }
@@ -401,7 +400,7 @@ body {
         margin-right: 0px;
     }
 
-    .social__img {
+    .social-img {
         padding-left: 20px;
         max-width: 40px;
     }
@@ -433,7 +432,7 @@ body {
         justify-self: right;
     }
 
-    .social__img {
+    .social-img {
         padding-left: 5px;
     }
 }
@@ -733,9 +732,9 @@ body {
 .about__content {
     grid-area: about__content;
     display: grid;
-    grid-template-columns: minmax(auto, 100px) minmax(auto, 330px) minmax(auto, 670px) minmax(auto, 100px);
+    grid-template-columns: minmax(auto, 400px) minmax(auto, 800px);
     grid-template-areas:
-        ". about-photo__container about-text__container .";
+        "about-photo__container about-text__container";
 }
 
 .about__title {
