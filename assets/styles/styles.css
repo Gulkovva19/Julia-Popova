@@ -734,7 +734,7 @@ body {
     display: grid;
     grid-template-columns: minmax(auto, 400px) minmax(auto, 800px);
     grid-template-areas:
-        "about-photo__container about-text__container";
+        "container__about-photo container__about-text";
 }
 
 .about__title {
@@ -743,8 +743,8 @@ body {
 
 }
 
-.about-text__container {
-    grid-area: about-text__container;
+.container__about-text {
+    grid-area: container__about-text;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -763,8 +763,8 @@ body {
     margin-right: 20px;
 }
 
-.about-photo__container {
-    grid-area: about-photo__container;
+.container__about-photo {
+    grid-area: container__about-photo;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -781,10 +781,6 @@ body {
     .about {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 994px) minmax(1rem, 1fr);
     }
-
-    .about__content {
-        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 33%) minmax(auto, 67%) minmax(1rem, 1fr);
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -792,7 +788,7 @@ body {
         grid-template-columns: minmax(1rem, 1fr) minmax(auto, 748px) minmax(1rem, 1fr);
     }
 
-    .about-photo__container {
+    .container__about-photo {
         display: none;
     }
 
@@ -803,8 +799,8 @@ body {
         max-width: 90%;
     }
 
-    .about-text__container {
-        grid-area: about-text__container;
+    .container__about-text {
+        grid-area: container__about-text;
         display: flex;
         flex-direction: column;
         justify-content: center;

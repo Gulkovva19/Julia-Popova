@@ -82,12 +82,12 @@
 
             <div class="about" id="about">
                 <div class="about__content">
-                    <div class="about-photo__container"> <!--не по БЭМ, блок не может лежать в элементе ) Правильно будет сделать блок container или about__container-->
+                    <div class="container__about-photo">
                         <img class="about-photo" src="/assets/images/about/about-photo.jpg" alt="Julia's photo">
                     </div>
-                    <div class="about-text__container"><!--то же самое ,что и выше )-->
+                    <div class="container__about-text">
                         <div class="about__title title">обо мне</div>
-                        <div class="about-item__container"> <!--не по БЭМ, элемент about-item__container без блока как ножка от стола без стола, это не кретично, стили написаны правильно, но именно название не по БЭМ-->
+                        <div>
                             <div class="about-text text">
                                 <img src="/assets/images/about/about-icon-rhombus.png" alt="" class="icon-about">
                                 <p>Основатель сети Инклюзивных клубов "Забота" на малых территориях Архангельской
@@ -308,7 +308,7 @@
 
                     <div class="contacts__connection">
                         <form class="contacts__form-inputs">
-                            <!--Валидатор ругается на method="" и action="//"-->
+
                             <h2 class="contacts__title title">КОНТАКТЫ</h2>
                             <p class="contacts__text text">Заполните форму, чтобы связаться со мной и обсудить
                                 Ваш
@@ -321,11 +321,11 @@
                         </form>
                     </div>
 
-                    <div class="contacts__image"><!--не по БЭМ, нет блока image. По БЭМ будет задать блок container, а image использовать как элемент-->
+                    <div class="contacts__image">
                         <img class="contact_image" src="/assets/images/contacts/contacts-photo.jpg" alt="photo">
                     </div>
 
-                    <div class="contacts__social"> <!-- не по БЭМ нет блока social По БЭМ будет задать блок container, а social использовать как элемент-->
+                    <div class="contacts__social">
                         <div class="phone social-icons">
                             <a href="tel:89115994852" target="_blank">
                                 <svg class="icon icon_phone">
