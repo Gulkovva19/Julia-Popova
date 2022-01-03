@@ -573,6 +573,39 @@ body {
 }
 
 /* - Медиазапросы ------------------------------------------ */
+@media screen and (min-width: 1501px) {
+    .intro {
+        grid-area: intro;
+        min-height: 100vh;
+        margin-top: -80px;
+        background: #baa8a6;
+        outline: 1px solid #FFFFFF;
+        outline-offset: -70px;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". intro__content .";
+    }
+
+    .intro__content {
+        grid-area: intro__content;
+        min-height: 100vh;
+        background: url("/assets/images/block_intro/sansbg.png") 100% 80px/contain no-repeat;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro__teaser";
+    }
+
+    .intro__teaser {
+        grid-area: intro__teaser;
+        align-self: center;
+        justify-self: left;
+        text-align: left;
+        padding: 20% 600px 100px 0px;
+    }
+}
+
 @media screen and (max-width: 1365px) {
     .intro__teaser {
         padding-right: 400px;
@@ -621,6 +654,7 @@ body {
         grid-area: intro__teaser;
         padding-bottom: 100px;
         padding-left: 20px;
+        padding-right: 350px;
     }
 }
 
