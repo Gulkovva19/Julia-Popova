@@ -305,9 +305,9 @@
 
             <div class="contacts" id="contacts">
                 <div class="contacts__content">
-                    <div class="connection__container">
 
-                        <form class="contact-form__inputs"><!--не по БЭМ. Правильно будет contacts__form-inputs form-inputs - элемент блока contacts (не contact), все остальное по БЭМ-->
+                    <div class="contacts__connection">
+                        <form class="contacts__form-inputs">
                             <!--Валидатор ругается на method="" и action="//"-->
                             <h2 class="contacts__title title">КОНТАКТЫ</h2>
                             <p class="contacts__text text">Заполните форму, чтобы связаться со мной и обсудить
@@ -321,14 +321,11 @@
                         </form>
                     </div>
 
-                    <div class="image__container"><!--не по БЭМ, нет блока image. По БЭМ будет задать блок container, а image использовать как элемент-->
-                        <img class="contact_image" src="/assets/images/contacts/Изображение из iOS.jpg" alt="photo">
-                        <!--плохая ссылка, так лучше не делать, лучше называть изображения английскими буквами и пробелы заменять _ image_ios.jpg стоит заменить название картинки и путь соответственно
-                        не по БЭМ нет блока contact, есть contacts-->
+                    <div class="contacts__image"><!--не по БЭМ, нет блока image. По БЭМ будет задать блок container, а image использовать как элемент-->
+                        <img class="contact_image" src="/assets/images/contacts/contacts-photo.jpg" alt="photo">
                     </div>
 
-                    <div class="social__container"> <!-- не по БЭМ нет блока social По БЭМ будет задать блок container, а social использовать как элемент-->
-
+                    <div class="contacts__social"> <!-- не по БЭМ нет блока social По БЭМ будет задать блок container, а social использовать как элемент-->
                         <div class="phone social-icons">
                             <a href="tel:89115994852" target="_blank">
                                 <svg class="icon icon_phone">
@@ -336,7 +333,6 @@
                                 </svg>
                             </a>
                         </div>
-
                         <div class="whatsapp social-icons">
                             <a href="https://wapp.click/79115994852" target="_blank">
                                 <svg class="icon icon_whatsapp">
@@ -344,7 +340,6 @@
                                 </svg>
                             </a>
                         </div>
-
                         <div class="insta social-icons">
                             <a href="https://instagram.com/yulia_popova29?utm_medium=copy_link" target="_blank">
                                 <svg class="icon icon_insta">
@@ -352,7 +347,6 @@
                                 </svg>
                             </a>
                         </div>
-
                         <div class="mail social-icons">
                             <a href="mailto:Popofffa08@mail.ru" target="_blank">
                                 <svg class="icon icon_mail">
@@ -361,6 +355,7 @@
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </main>
