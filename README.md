@@ -1,17 +1,17 @@
-# Адаптивная верстка сайта-визитки для фандрайзера
+# Tutorial
 
-Технологии: HTML5, CSS3, JavaScript
-
-Как начать: разместите родительский каталог на веб-сервере
-
-Командный проект в ходе обучения в онлайн школе #ITGirlS. Личный сайт Юлии Поповой - фандрайзера в области социальных проектов. <br>
-Целями создания сайта были: повышение доверия к компетенциям заказчицы, формирование положительного образа ее деятельности и, главное, упрощение контактов для дальнейшего сотрудничества.
-
-Ключевыми моментами для заказчицы были:
-- доступное и грамотное донесение важной информации, удобная структура сайта; 
-- максимально упрощенная обратная связь через различные каналы (телефон, почта, форма обратной связи, ссылки на соц.сети);
-- эстетически красивый сайт, адаптированный под мобильные устройтства.
+<p>Responsive website for a fundraiser</p>
+<img width="700" alt="Снимок экрана 2022-06-23 в 16 27 09" src="https://user-images.githubusercontent.com/91186108/175310168-8c5f9932-8bd8-4a81-8fdd-eb4df5248919.png">
+<img width="700" alt="Снимок экрана 2022-06-23 в 16 27 54" src="https://user-images.githubusercontent.com/91186108/175310325-1bc59b80-e5c3-49cd-ab61-af80befb4335.png">
 
 
+## Getting started
+Host the parent directory on the webserver
+  
+## Technologies:
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
+<code><img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
 
+## Result:
 http://www.juliapopova.ru/
