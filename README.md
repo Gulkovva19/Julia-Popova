@@ -1,4 +1,4 @@
-# Tutorial
+# Website for a fundraiser
 
 <p>Responsive website for a fundraiser</p>
 <img width="700" alt="Снимок экрана 2022-06-23 в 16 27 09" src="https://user-images.githubusercontent.com/91186108/175310168-8c5f9932-8bd8-4a81-8fdd-eb4df5248919.png">
